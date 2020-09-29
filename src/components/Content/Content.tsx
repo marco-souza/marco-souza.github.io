@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Breadcrumb, Content, Container } from 'components/@core/styled';
+import { Breadcrumb, Content, Container } from '@core/styled';
 
 interface LayoutContentProps {
   children: JSX.Element;

@@ -1,7 +1,7 @@
 import { Layout, Menu } from 'antd';
 import React from 'react';
 
-import { LogoContainer } from 'components/@core/styled';
+import { LogoContainer } from '@core/styled';
 
 const { Header } = Layout;
 
