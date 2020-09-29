@@ -1,5 +1,6 @@
 import { Layout } from 'antd';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import React from 'react';
 
 import LayoutContent from 'components/Content';
@@ -17,6 +18,7 @@ export default function PageLayout({
   Component,
   pageProps,
 }: PageLayoutProps): JSX.Element {
+  const router = useRouter();
   return (
     <>
       <Head>
@@ -24,15 +26,19 @@ export default function PageLayout({
         <title>Next.js Base Project</title>
       </Head>
 
-      <Layout>
-        <LayoutHeader />
+      {router.pathname !== '/' ? (
+        <Layout>
+          <LayoutHeader />
 
-        <LayoutContent>
-          <Component {...pageProps} />
-        </LayoutContent>
+          <LayoutContent>
+            <Component {...pageProps} />
+          </LayoutContent>
 
-        <LayoutFooter />
-      </Layout>
+          <LayoutFooter />
+        </Layout>
+      ) : (
+        <Component {...pageProps} />
+      )}
     </>
   );
 }
