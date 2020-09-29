@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React from 'react';
 
+import { pageInfo } from '@core/configs';
 import LayoutContent from 'components/Content';
 import LayoutFooter from 'components/Footer';
 import LayoutHeader from 'components/Header';
@@ -23,7 +24,7 @@ export default function PageLayout({
     <>
       <Head>
         <meta charSet="utf-8" />
-        <title>Next.js Base Project</title>
+        <title>{pageInfo.title}</title>
       </Head>
 
       {router.pathname !== '/' ? (

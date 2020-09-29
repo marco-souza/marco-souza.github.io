@@ -1,7 +1,7 @@
 import { Row, Col } from 'antd';
 import React from 'react';
 
-import { HomeSection, Button } from 'components/@core/styled';
+import { HomeSection, Button } from '@core/styled';
 import Social from 'components/Social';
 
 export default function Home(): JSX.Element {
