@@ -1,6 +1,6 @@
 # Next.js base project
 
-![](https://github.com/marco-souza/base-next-app/workflows/GH%20Pages%20Deploy/badge.svg)
+![](https://github.com/marco-souza/marco-souza.github.io/workflows/GH%20Pages%20Deploy/badge.svg)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 

@@ -1,8 +1,8 @@
 {
-  "name": "base-next-app",
+  "name": "marco-souza.github.io",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://marco-souza.github.io/base-next-app",
+  "homepage": "https://marco-souza.github.io/",
   "scripts": {
     "dev": "next dev",
     "lint": "prettier --check . && eslint src/**",
