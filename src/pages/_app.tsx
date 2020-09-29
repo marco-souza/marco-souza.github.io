@@ -27,7 +27,7 @@ export default function PageLayout({
       </Head>
 
       {router.pathname !== '/' ? (
-        <Layout>
+        <Layout data-testid="layout">
           <LayoutHeader />
 
           <LayoutContent>

@@ -11,12 +11,12 @@ const socialNetworks = [
   },
 ];
 
-export default function Home(): JSX.Element {
+export default function Social(): JSX.Element {
   return (
     <SocialContainer>
       {socialNetworks.map(({ icon, href }) => (
         <a key={icon} href={href} target="blank">
-          <DevIcons icon={icon} viewBox="0 0 32 32" />
+          <DevIcons data-testid="icon" icon={icon} viewBox="0 0 32 32" />
         </a>
       ))}
     </SocialContainer>
