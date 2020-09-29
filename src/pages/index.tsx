@@ -1,25 +1,15 @@
 import React from 'react';
 
 import { GithubProfileResponse } from 'api/types';
+import Home from 'components/Home';
 
 export interface HomeProps {
   profile: GithubProfileResponse;
 }
 
-export default function Home(): JSX.Element {
+export default function HomePage(): JSX.Element {
   // return <code>{JSON.stringify(profile)}</code>;
-  return (
-    <>
-      <h1>React Notes & Bookmarks</h1>
-      <iframe
-        title="Notion React notes"
-        src="https://www.notion.so/React-31080c2481b14ce38818f35327b230e0"
-        width="100%"
-        height="800px"
-        frameBorder="0"
-      />
-    </>
-  );
+  return <Home />;
 }
 
 interface StaticProps {

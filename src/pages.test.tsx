@@ -1,3 +1,4 @@
+import { useRouter as mockedUseRouter } from 'next/router';
 import React from 'react';
 
 import { setupComponentForTest } from 'helpers/testUtils';
@@ -5,7 +6,21 @@ import { setupComponentForTest } from 'helpers/testUtils';
 import Home, { getStaticProps } from './pages';
 import AppLayout from './pages/_app';
 
+jest.mock('next/router', () => ({
+  useRouter: jest.fn(),
+}));
+
+jest.mock('devicon-react-svg', () => {
+  return function DummyComponent() {
+    return <div data-testid="icon" />;
+  };
+});
+
 describe(`Page tests`, () => {
+  (mockedUseRouter as jest.Mock).mockReturnValue({
+    pathname: '/',
+  });
+
   const TestComponent = () => <p data-testid="test-component">test</p>;
   const setup = setupComponentForTest(
     <AppLayout Component={TestComponent} pageProps={{}} />,
@@ -16,15 +31,31 @@ describe(`Page tests`, () => {
 
     expect(wrapper).toBeTruthy();
   });
+
+  it('should render without layout', () => {
+    const { wrapper } = setup();
+
+    expect(() => wrapper.getByTestId('layout')).toThrow();
+  });
+
+  it('should render with layout', () => {
+    (mockedUseRouter as jest.Mock).mockReturnValueOnce({
+      pathname: '/something/test',
+    });
+    const { wrapper } = setup();
+
+    expect(wrapper.getByTestId('layout')).toBeTruthy();
+  });
 });
 
 describe(`Home tests`, () => {
   const setup = setupComponentForTest(<Home />);
 
-  it('should render home', () => {
+  it('should render Home', () => {
     const { wrapper } = setup();
 
     expect(wrapper).toBeTruthy();
+    expect(wrapper.getByTestId('home')).toBeTruthy();
   });
 });
 
