@@ -21,12 +21,22 @@ export const Container = styled.div`
   /* TODO: Move 'color' definition[L47] to layout content */
 `;
 
-export const LogoContainer = styled.div`
-  background: rgba(255, 255, 255, 0.2);
-  box-sizing: border-box;
-  padding: 0 1rem;
-  color: white;
-  float: left;
+export const HeaderContainer = styled(Layout.Header)`
+  background: ${themes[AvailableThemes.dark].black};
+  box-shadow: 0px 5px 15px ${themes[AvailableThemes.dark].black};
+  padding: 0 30px;
+
+  div {
+    color: ${themes[AvailableThemes.dark].white};
+    box-sizing: border-box;
+    float: left;
+    font-weight: bold;
+  }
+
+  .right {
+    float: right;
+    font-size: 0.8rem;
+  }
 `;
 
 export const HomeSection = styled.div`
@@ -78,7 +88,7 @@ export const DevIcons = styled(DevIcon)`
 `;
 
 export const SocialContainer = styled.div`
-  margin-bottom: 4rem;
+  margin: ${(props) => (props.className === 'header' ? 1 : 4)}rem 0;
   text-align: center;
 
   span {
