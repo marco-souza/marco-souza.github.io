@@ -1,3 +1,4 @@
+import { useRouter as mockedUseRouter } from 'next/router';
 import React from 'react';
 
 import { setupComponentForTest } from 'helpers/testUtils';
@@ -10,8 +11,13 @@ const setup = setupComponentForTest(
   </Content>,
 );
 
+jest.mock('next/router', () => ({
+  useRouter: jest.fn(),
+}));
+
 describe(`Content tests`, () => {
   it('should render content with children', () => {
+    (mockedUseRouter as jest.Mock).mockReturnValue({ pathname: '/a' });
     const { wrapper } = setup();
 
     expect(wrapper.getByTestId('content')).toBeTruthy();
