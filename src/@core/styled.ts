@@ -60,7 +60,8 @@ export const Button = styled(btn)`
   border-radius: 5px 5px;
   width: 100%;
 
-  &:hover {
+  &:hover,
+  &:focus {
     border: 1px solid ${themes[AvailableThemes.dark].gray};
     color: ${themes[AvailableThemes.dark].gray};
     background: unset;
@@ -79,7 +80,7 @@ export const DevIcons = styled(DevIcon)`
 `;
 
 export const SocialContainer = styled.div`
-  margin-top: 4rem;
+  margin-bottom: 4rem;
   text-align: center;
 
   span {
