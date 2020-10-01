@@ -18,11 +18,7 @@ export const Container = styled.div`
   background: #fff;
   padding: 1.5rem;
   min-height: 280px;
-
-  &,
-  & iframe {
-    border-radius: 3px;
-  }
+  /* TODO: Move 'color' definition[L47] to layout content */
 `;
 
 export const LogoContainer = styled.div`
@@ -36,11 +32,9 @@ export const LogoContainer = styled.div`
 export const HomeSection = styled.div`
   height: 100vh;
   background: ${themes[AvailableThemes.dark].black};
-  color: ${themes[AvailableThemes.dark].gray};
   padding: 3rem;
 
-  h1 {
-    color: ${themes[AvailableThemes.dark].gray};
+  #header {
     padding: 6rem 0;
     text-align: center;
   }
@@ -48,6 +42,10 @@ export const HomeSection = styled.div`
   > div {
     margin: 0 auto;
     max-width: 960px;
+  }
+
+  * {
+    color: ${themes[AvailableThemes.dark].gray};
   }
 `;
 

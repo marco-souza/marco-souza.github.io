@@ -16,7 +16,7 @@ describe(`Home tests`, () => {
   it('should render title and social', () => {
     const { wrapper } = setup();
 
-    expect(wrapper.getByTestId('title')).toBeTruthy();
+    expect(wrapper.getByTestId('header')).toBeTruthy();
     expect(wrapper.getByTestId('social')).toBeTruthy();
   });
 });
