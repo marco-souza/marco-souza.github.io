@@ -1,4 +1,5 @@
 import { Row, Col } from 'antd';
+import Link from 'next/link';
 import React from 'react';
 
 import { pageInfo } from '@core/configs';
@@ -19,13 +20,19 @@ export default function Home(): JSX.Element {
 
         <Row gutter={16}>
           <Col span={12} md={8}>
-            <Button>Projects</Button>
+            <Link href="/projects">
+              <Button>Projects</Button>
+            </Link>
           </Col>
           <Col span={12} md={8}>
-            <Button>Recipes</Button>
+            <Link href="/recipes">
+              <Button>Recipes</Button>
+            </Link>
           </Col>
           <Col span={24} md={8}>
-            <Button>Resume</Button>
+            <Link href="/resume">
+              <Button>Resume</Button>
+            </Link>
           </Col>
         </Row>
       </div>
