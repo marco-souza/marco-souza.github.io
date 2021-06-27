@@ -1,7 +1,19 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import type { AppProps } from "next/app";
+import { ReactNode } from "react";
+import { ChakraProvider } from "@chakra-ui/react";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return renderProviders(<Component {...pageProps} />);
 }
-export default MyApp
+
+// Inject all root providers
+const providers = [ChakraProvider];
+
+function renderProviders(children: ReactNode) {
+  return providers.reduce(
+    (aggregated, CurrentProvider) => <CurrentProvider>{aggregated}</CurrentProvider>,
+    children
+  );
+}
+
+export default MyApp;
