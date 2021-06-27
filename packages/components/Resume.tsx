@@ -1,4 +1,14 @@
-import { Box, Grid, GridItem, Heading, Flex, Text, Image, SkeletonCircle, SkeletonText } from "@chakra-ui/react";
+import {
+  Box,
+  Grid,
+  GridItem,
+  Heading,
+  Flex,
+  Text,
+  Image,
+  SkeletonCircle,
+  SkeletonText,
+} from "@chakra-ui/react";
 import { useGithubProfile } from "@packages/features/github-profile";
 import ReactMarkdown from "react-markdown";
 
@@ -45,20 +55,20 @@ function Sidebar() {
 
       <Box textAlign="center" m={1}>
         <Heading as="h2" size="md">
-        <SkeletonText isLoaded={name !== ''} noOfLines={1} margin={4}>
-          {name}
-        </SkeletonText>
+          <SkeletonText isLoaded={name !== ""} noOfLines={1} margin={4}>
+            {name}
+          </SkeletonText>
         </Heading>
         <Text size="sm" color="gray.500">
           {/* // TODO: move text to configs */}
           Sr. Software Developer Engineer
         </Text>
 
-        <SkeletonText isLoaded={description !== ''} noOfLines={3} margin={4}>
-          <Text margin="1rem 0.5rem">
+        <Box margin="1rem 0.5rem">
+          <SkeletonText isLoaded={description !== ""} noOfLines={3} margin={4}>
             {description}
-          </Text>
-        </SkeletonText>
+          </SkeletonText>
+        </Box>
       </Box>
 
       {/* // TODO: add "download resume" button */}
@@ -77,9 +87,9 @@ function CoverLetter() {
 
         <Box>
           {coverLetterParagraphs.map((text) => (
-            <Text key={text} margin="0.5rem 0" fontSize="0.9rem">
+            <Box key={text} margin="0.5rem 0" fontSize="0.9rem">
               <ReactMarkdown>{text}</ReactMarkdown>
-            </Text>
+            </Box>
           ))}
         </Box>
       </Box>
