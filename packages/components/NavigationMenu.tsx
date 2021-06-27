@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 import Image from "next/image";
 import {
   Box,
@@ -6,16 +6,29 @@ import {
   HStack,
   Link,
   IconButton,
-  Button,
+  Text,
   useDisclosure,
   useColorModeValue,
   Stack,
-  useColorMode,
+  createIcon,
+  ComponentWithAs,
+  IconProps,
+  Divider,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, AddIcon } from "@chakra-ui/icons";
-import AvatarMenu from "./AvatarMenu";
+
+import ToggleThemeButton from "./ToggleThemeButton";
+import { GithubIcon, LinkedInIcon, StackOverflowIcon } from "@packages/icons";
 
 const Links = ["Dashboard", "Projects", "Team"];
+
+type SocialElement = [string, ComponentWithAs<"svg", IconProps>];
+
+const socialElements: SocialElement[] = [
+  ["https://stackoverflow.com/users/7988674/marco-antônio/", StackOverflowIcon],
+  ["https://www.linkedin.com/in/masouzajunior/", LinkedInIcon],
+  ["https://github.com/marco-souza/", GithubIcon],
+];
 
 const NavLink = ({ children }: { children: ReactNode }) => (
   <Link
@@ -46,37 +59,31 @@ export default function NavigationMenu() {
             display={{ md: "none" }}
             onClick={isOpen ? onClose : onOpen}
           />
+
           <HStack spacing={8} alignItems={"center"}>
             <Box>
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                width={72}
-                height={16}
-              />
+              <Text fontFamily="Times New Roman" fontSize="3xl">
+                M.
+              </Text>
             </Box>
-            <HStack
-              as={"nav"}
-              spacing={4}
-              display={{ base: "none", md: "flex" }}
-            >
+            <HStack as={"nav"} spacing={4} display={{ base: "none", md: "flex" }}>
               {Links.map((link) => (
                 <NavLink key={link}>{link}</NavLink>
               ))}
             </HStack>
+            <Divider />
           </HStack>
-          <Flex alignItems={"center"}>
-            <Button
-              variant={"solid"}
-              colorScheme={"teal"}
-              size={"sm"}
-              mr={4}
-              leftIcon={<AddIcon />}
-            >
-              Action
-            </Button>
 
-            <AvatarMenu />
+          <Flex alignItems={"center"}>
+            <Box display={{ sm: "none", md: "inherit" }}>
+              {socialElements.map(([url, Icon]) => (
+                <Link key={url} target="_blank" href={url} m="1rem">
+                  <Icon />
+                </Link>
+              ))}
+            </Box>
+
+            <ToggleThemeButton />
           </Flex>
         </Flex>
 
@@ -87,6 +94,14 @@ export default function NavigationMenu() {
                 <NavLink key={link}>{link}</NavLink>
               ))}
             </Stack>
+
+            <Flex justifyContent="center">
+              {socialElements.map(([url, Icon]) => (
+                <Link key={url} target="_blank" href={url} m="1rem">
+                  <Icon />
+                </Link>
+              ))}
+            </Flex>
           </Box>
         ) : null}
       </Box>
