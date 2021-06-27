@@ -28,7 +28,6 @@ interface Props {
 }
 
 export function GithubProvider({ children, githubData }: Props) {
-  console.log({ githubData })
   return (
     <GithubProfileCtx.Provider value={processGithubProfile(githubData)}>
       {children}
