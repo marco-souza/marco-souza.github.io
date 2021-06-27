@@ -1,6 +1,6 @@
-import Head from 'next/head'
-import { Container } from '@chakra-ui/react'
-import NavigationMenu from '@packages/components/NavigationMenu'
+import Head from "next/head";
+import { Container } from "@chakra-ui/react";
+import NavigationMenu from "@packages/components/NavigationMenu";
 
 export default function Home() {
   return (
@@ -14,14 +14,10 @@ export default function Home() {
       <NavigationMenu />
 
       <Container>
-        <main>
-          Main
-        </main>
+        <main>Main</main>
 
-        <footer>
-          Footer
-        </footer>
+        <footer>Footer</footer>
       </Container>
     </>
-  )
+  );
 }

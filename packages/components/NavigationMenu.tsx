@@ -52,9 +52,18 @@ export default function NavigationMenu() {
           />
           <HStack spacing={8} alignItems={"center"}>
             <Box>
-              <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+              <Image
+                src="/vercel.svg"
+                alt="Vercel Logo"
+                width={72}
+                height={16}
+              />
             </Box>
-            <HStack as={"nav"} spacing={4} display={{ base: "none", md: "flex" }}>
+            <HStack
+              as={"nav"}
+              spacing={4}
+              display={{ base: "none", md: "flex" }}
+            >
               {Links.map((link) => (
                 <NavLink key={link}>{link}</NavLink>
               ))}
@@ -71,7 +80,12 @@ export default function NavigationMenu() {
               Action
             </Button>
             <Menu>
-              <MenuButton as={Button} rounded={"full"} variant={"link"} cursor={"pointer"}>
+              <MenuButton
+                as={Button}
+                rounded={"full"}
+                variant={"link"}
+                cursor={"pointer"}
+              >
                 <Avatar
                   size={"sm"}
                   src={

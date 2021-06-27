@@ -11,7 +11,9 @@ const providers = [ChakraProvider];
 
 function renderProviders(children: ReactNode) {
   return providers.reduce(
-    (aggregated, CurrentProvider) => <CurrentProvider>{aggregated}</CurrentProvider>,
+    (aggregated, CurrentProvider) => (
+      <CurrentProvider>{aggregated}</CurrentProvider>
+    ),
     children
   );
 }
