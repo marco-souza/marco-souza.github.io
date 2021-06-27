@@ -62,7 +62,7 @@ export default function NavigationMenu() {
 
           <HStack spacing={8} alignItems={"center"}>
             <Box>
-              <Text fontFamily="Times New Roman" fontSize="3xl">
+              <Text fontWeight="bold" fontFamily="Times New Roman" fontSize="3xl">
                 M.
               </Text>
             </Box>
