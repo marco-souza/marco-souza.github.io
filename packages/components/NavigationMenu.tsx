@@ -1,5 +1,4 @@
 import React, { ReactNode } from "react";
-import Image from "next/image";
 import {
   Box,
   Flex,
@@ -10,12 +9,11 @@ import {
   useDisclosure,
   useColorModeValue,
   Stack,
-  createIcon,
   ComponentWithAs,
   IconProps,
   Divider,
 } from "@chakra-ui/react";
-import { HamburgerIcon, CloseIcon, AddIcon } from "@chakra-ui/icons";
+import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 
 import ToggleThemeButton from "./ToggleThemeButton";
 import { GithubIcon, LinkedInIcon, StackOverflowIcon } from "@packages/icons";
@@ -30,7 +28,13 @@ const socialElements: SocialElement[] = [
   ["https://github.com/marco-souza/", GithubIcon],
 ];
 
-const NavLink = ({ children }: { children: ReactNode }) => (
+interface NavLinkProps {
+  readonly children: ReactNode;
+  readonly href?: string;
+  readonly target?: string;
+}
+
+const NavLink = ({ children, target, href = "#" }: NavLinkProps) => (
   <Link
     px={2}
     py={1}
@@ -39,7 +43,8 @@ const NavLink = ({ children }: { children: ReactNode }) => (
       textDecoration: "none",
       bg: useColorModeValue("gray.200", "gray.700"),
     }}
-    href={"#"}
+    target={target}
+    href={href}
   >
     {children}
   </Link>
@@ -47,6 +52,12 @@ const NavLink = ({ children }: { children: ReactNode }) => (
 
 export default function NavigationMenu() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const socialIcons = socialElements.map(([url, Icon]) => (
+    <NavLink key={url} href={url} target="_blank">
+      <Icon />
+    </NavLink>
+  ));
 
   return (
     <>
@@ -75,13 +86,7 @@ export default function NavigationMenu() {
           </HStack>
 
           <Flex alignItems={"center"}>
-            <Box display={{ sm: "none", md: "inherit" }}>
-              {socialElements.map(([url, Icon]) => (
-                <Link key={url} target="_blank" href={url} m="1rem">
-                  <Icon />
-                </Link>
-              ))}
-            </Box>
+            <Box display={{ sm: "none", md: "inherit" }}>{socialIcons}</Box>
 
             <ToggleThemeButton />
           </Flex>
@@ -95,13 +100,7 @@ export default function NavigationMenu() {
               ))}
             </Stack>
 
-            <Flex justifyContent="center">
-              {socialElements.map(([url, Icon]) => (
-                <Link key={url} target="_blank" href={url} m="1rem">
-                  <Icon />
-                </Link>
-              ))}
-            </Flex>
+            <Flex justifyContent="center">{socialIcons}</Flex>
           </Box>
         ) : null}
       </Box>
