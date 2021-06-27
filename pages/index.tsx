@@ -12,7 +12,7 @@ export default function Home({ github }: HomeProps) {
   const containerBgCollor = useColorModeValue("whitesmoke", "gray.700");
 
   return (
-    <Box backgroundColor={containerBgCollor} h="100vh">
+    <Box backgroundColor={containerBgCollor} h="calc(100vh - 60px)" marginTop="60px" p={1}>
       <GithubProvider githubData={github}>
         <Head>
           {/* TODO: add below texts to configs */}
