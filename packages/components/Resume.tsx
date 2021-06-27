@@ -1,4 +1,4 @@
-import { Box, Grid, GridItem, Heading, Text, Image } from "@chakra-ui/react";
+import { Box, Grid, GridItem, Heading, Flex, Text, Image, SkeletonCircle, SkeletonText } from "@chakra-ui/react";
 import { useGithubProfile } from "@packages/features/github-profile";
 import ReactMarkdown from "react-markdown";
 
@@ -29,28 +29,36 @@ function Sidebar() {
     <>
       <Box height="18rem">
         <Box backgroundColor="blue.300" height="60%" p={10}></Box>
-        <Image
-          src={avatar}
-          alt="Profile foto"
-          rounded="full"
-          padding={1}
-          width={200}
-          margin="-100px auto"
-        />
+
+        <Flex margin="-100px 0">
+          <SkeletonCircle
+            width="200"
+            height="200"
+            isLoaded={avatar !== ""}
+            rounded="full"
+            margin="0 auto"
+          >
+            <Image src={avatar} alt="Profile foto" padding={1} width={200} rounded="full" />
+          </SkeletonCircle>
+        </Flex>
       </Box>
 
       <Box textAlign="center" m={1}>
         <Heading as="h2" size="md">
+        <SkeletonText isLoaded={name !== ''} noOfLines={1} margin={4}>
           {name}
+        </SkeletonText>
         </Heading>
         <Text size="sm" color="gray.500">
           {/* // TODO: move text to configs */}
           Sr. Software Developer Engineer
         </Text>
 
-        <Text margin="1rem 0.5rem">
-          <ReactMarkdown>{description}</ReactMarkdown>
-        </Text>
+        <SkeletonText isLoaded={description !== ''} noOfLines={3} margin={4}>
+          <Text margin="1rem 0.5rem">
+            {description}
+          </Text>
+        </SkeletonText>
       </Box>
 
       {/* // TODO: add "download resume" button */}
