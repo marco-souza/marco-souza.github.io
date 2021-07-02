@@ -3,6 +3,7 @@ import { Container, Heading, Box, useColorModeValue } from "@chakra-ui/react";
 import NavigationMenu from "@packages/components/NavigationMenu";
 import Resume from "@packages/components/Resume";
 import { GithubProvider, RawGithubProfile } from "@packages/features/github-profile";
+import Footer from "@packages/components/Footer";
 
 interface HomeProps {
   readonly github: RawGithubProfile;
@@ -31,6 +32,8 @@ export default function Home({ github }: HomeProps) {
           </main>
 
         </Container>
+
+        <Footer />
       </GithubProvider>
     </Box>
   );

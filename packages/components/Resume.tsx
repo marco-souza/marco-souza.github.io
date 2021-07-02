@@ -220,7 +220,7 @@ function CardLayout({ children, display, backgroundColor, title }: CardLayoutPro
   return (
     <Box shadow="base" display={display}>
       <Box p={2} fontSize="1rem" borderBottomColor={backgroundColor} borderBottomWidth="0.5rem">
-        <Heading as="h3" size="md" margin="1rem 0">
+        <Heading as="h3" size="md" marginBottom="1rem">
           {title}
         </Heading>
 
