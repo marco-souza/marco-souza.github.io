@@ -10,14 +10,8 @@ import {
   SkeletonText,
 } from "@chakra-ui/react";
 import { useGithubProfile } from "@packages/features/github-profile";
+import resume from "@packages/config/resume.yml";
 import ReactMarkdown from "react-markdown";
-
-// TODO: move text to configs
-const coverLetterParagraphs: string[] = [
-  "Hello, my name is **Marco Antônio**, and I’m building software for the web **more than 10 years**.",
-  "Last 6 years I've been building frontend heavy apps, extensively working with **Node.JS**, **React**, and **TypeScript**. I've also experience working as **Cloud Architect** and **DevOps Engineer**, creating high availability services in great companies, *including Amazon*.",
-  "*Thanks* for visiting my resume, and I hope we have a change to connect! 😁",
-];
 
 function Resume() {
   return (
@@ -60,8 +54,7 @@ function Sidebar() {
           </SkeletonText>
         </Heading>
         <Text size="sm" color="gray.500">
-          {/* // TODO: move text to configs */}
-          Sr. Software Developer Engineer
+          {resume.title}
         </Text>
 
         <Box margin="1rem 0.5rem">
@@ -86,7 +79,7 @@ function CoverLetter() {
         </Heading>
 
         <Box>
-          {coverLetterParagraphs.map((text) => (
+          {resume.cover_letter.split('\n').map((text: string) => (
             <Box key={text} margin="0.5rem 0" fontSize="0.9rem">
               <ReactMarkdown>{text}</ReactMarkdown>
             </Box>

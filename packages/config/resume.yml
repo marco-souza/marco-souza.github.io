@@ -1,0 +1,154 @@
+
+title: Sr. Software Engineer
+
+cover_letter: >-
+  Hello, my name is **Marco Antônio**, and I’m building software for the web **more than 10 years**.
+
+  Last 6 years I've been building frontend heavy apps, extensively working with **Typescript/JavaScript**, **Node.js**, and **React**. I've also experience working as **Cloud Architect** and **DevOps Engineer**, creating high availability services in great companies, *including Amazon*.
+
+  *Thanks* for visiting my resume, and I hope we have a change to connect! 😁
+
+relevant_experiences:
+  - company: Paradigm.co
+    job_title: Sr Software Development Engineer
+    location: New York - remote from Brazil
+    dates_employed: Jan 2021 – present
+    tech_stack: [react, react-native, electron, redux, redux-toolkit, redux-saga, django, golang, docker, redis]
+    description: >
+      Paradigm automates bilateral price negotiation and settlement workflows for institutional digital asset traders.
+
+  - company: Amazon
+    job_title: Software Development Engineer II
+    location: São Paulo - Brazil
+    dates_employed: Oct 2019 – Mar 2021
+    tech_stack: [aws, react, redux, redux-saga, kotlin, lambda, dynamodb, python, docker, elk, redis]
+    # employment_duration: "1 yr 6 mos" # TODO: can be calculated from above info (date-fns)
+    description: >
+      Our mission is to be Earth’s most customer-centric company.
+      This is what unites Amazonians across teams and geographies as we are all striving to delight our customers and make their lives easier, one innovative product, service, and idea at a time.
+
+  - company: Inkitt
+    job_title: Tech Lead - Software Engineer
+    location: Berlin - Germany
+    dates_employed: Nov 2017 – Jun 2018
+    tech_stack: [react, react-native, redux, redux-thunk, ruby-on-rails, docker, redis]
+    description: >
+      Inkitt it's a Publisher company which aims to connect authors and readers and, based on that interaction, predicted which books have the potential to become Best Sellers
+
+education:
+  - institution: Universidade Federal de Minas Gerais
+    field_of_study: Matemática Computacional
+    period: 2012 – 2017
+  - institution: Centro Federal de Educação Tecnológica de Minas Gerais
+    field_of_study: Tecnologia da Informação
+    period: 2009 – 2011
+
+certificates:
+  - title: AWS Certified Cloud Practitioner
+    issuing_authority: Amazon Web Services (AWS)
+    period: Oct 2020 - Oct 2023
+    credential_url: https://www.youracclaim.com/badges/3e20fa2f-07c9-40aa-b486-9fbdaaef40fb?source=linked_in_profile
+
+skills:
+  programming_languages:
+    - name: TypeScript/JavaScript
+      icon: ??
+      rate: 5
+    - name: Python
+      icon: ??
+      rate: 5
+    - name: Golang
+      icon: ??
+      rate: 3
+    - name: Shell script
+      icon: ??
+      rate: 4
+    - name: Kotlin/Java
+      icon: ??
+      rate: 4
+  dev_tools:
+    - name: Linux
+      icon: ??
+      rate: 5
+    - name: Docker
+      icon: ??
+      rate: 5
+    - name: Git
+      icon: ??
+      rate: 5
+    - name: Node.JS
+      icon: ??
+      rate: 5
+    - name: Deno
+      icon: ??
+      rate: 4
+  frontend:
+    - name: React
+      icon: ??
+      rate: 5
+    - name: React Native
+      icon: ??
+      rate: 5
+    - name: Electron
+      icon: ??
+      rate: 4
+    - name: Next.js
+      icon: ??
+      rate: 5
+    - name: Redux
+      icon: ??
+      rate: 5
+    - name: Redux Toolkit (RTK)
+      icon: ??
+      rate: 5
+    - name: Build tools (webpack, parcel, rollup)
+      icon: ??
+      rate: 5
+    - name: Service Workers
+      icon: ??
+      rate: 4
+    - name: Progressive WebApps
+      icon: ??
+      rate: 4
+  backend:
+    - name: Node.js (express,koa,fastify)
+      icon: ??
+      rate: 5
+    - name: Redis
+      icon: ??
+      rate: 5
+    - name: MongoDB
+      icon: ??
+      rate: 5
+    - name: Elastic Stack (elk)
+      icon: ??
+      rate: 3
+    - name: MySQL databases (MySQL,MariaDB,PostgreSQL)
+      icon: ??
+      rate: 4
+  infra:
+    - name: GNU/Linux
+      icon: ??
+      rate: 5
+    - name: Docker
+      icon: ??
+      rate: 5
+    - name: Nomad
+      icon: ??
+      rate: 4
+    - name: Kubernetes
+      icon: ??
+      rate: 3
+    - name: ECS / Fargate
+      icon: ??
+      rate: 3
+    - name: AWS DynamoDB
+      icon: ??
+      rate: 4
+    - name: SNS
+      icon: ??
+      rate: 5
+    - name: SQS
+      icon: ??
+      rate: 5
+

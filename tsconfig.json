@@ -15,9 +15,14 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@packages/*": ["./packages/*"]
-    }
+      "@packages/*": ["./packages/*", "./packages/types.d.ts"]
+    },
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.yml",
+  ],
+  "exclude": ["node_modules"],
 }
