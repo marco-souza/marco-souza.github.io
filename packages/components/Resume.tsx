@@ -11,20 +11,24 @@ import {
   BoxProps,
   useColorModeValue,
   Link,
+  Progress,
 } from "@chakra-ui/react";
 import { useGithubProfile } from "@packages/features/github-profile";
-import resume from "@packages/config/resume.yml";
+import resume, { Skill } from "@packages/config/resume.yml";
 import ReactMarkdown, { ReactNode } from "react-markdown";
 import { LinkedInIcon } from "@packages/icons";
 
 function Resume() {
   return (
-    <Grid templateColumns="repeat(3, 1fr)" gap={4}>
-      <GridItem colSpan={{ md: 1, sm: 3 }}>
-        <Sidebar />
+    <Grid templateColumns="1fr 2fr" gap={4}>
+      <GridItem colSpan={{ md: 1, sm: 2 }}>
+        <Grid gap="1rem">
+          <Sidebar />
+          <Skills />
+        </Grid>
       </GridItem>
 
-      <GridItem colSpan={{ md: 2, sm: 3 }}>
+      <GridItem colSpan={{ md: 1, sm: 2 }}>
         <Grid gap="1rem">
           <CoverLetter />
           <Experiences />
@@ -69,6 +73,20 @@ function Sidebar() {
           <SkeletonText isLoaded={description !== ""} noOfLines={3} margin={4}>
             {description}
           </SkeletonText>
+        </Box>
+
+        <Box margin="1.5rem 0.5rem">
+          <Link
+            border="1px solid"
+            p="5px 10px"
+            margin="1rem 0"
+            borderRadius="md"
+            color="tomato"
+            href={resume.resume_url}
+            target="_blank"
+          >
+            Download resume
+          </Link>
         </Box>
       </Box>
 
@@ -146,7 +164,7 @@ function Experiences() {
 function Education() {
   const periodColor = useColorModeValue("gray.500", "gray.200");
   return (
-    <CardLayout backgroundColor="red.300" title="Education">
+    <CardLayout backgroundColor="pink.200" title="Education">
       {resume.education.map((exp) => (
         <Box key={exp.institution} margin="1rem 0" fontSize="0.9rem">
           <Heading as="h4" fontSize="1rem">
@@ -156,6 +174,37 @@ function Education() {
             {exp.period}
           </Text>
           <Text>{exp.field_of_study}</Text>
+        </Box>
+      ))}
+    </CardLayout>
+  );
+}
+
+function Skills() {
+  return (
+    <CardLayout backgroundColor="blue.600" title="Skills">
+      {Object.entries(resume.skills).map(([key, skills]: [string, Skill[]]) => (
+        <Box key={key} fontSize="0.9rem">
+          <Heading as="h4" fontSize="1rem">
+            {key}
+          </Heading>
+          <Grid m={4} templateColumns="repeat(3, 1fr)" gap={2}>
+            {skills.map((skill) => (
+              <GridItem key={skill.name} title={`${skill.name} - ${skill.rate}/5`}>
+                <Grid templateColumns="30px auto">
+                  <Image src={skill.icon} width="20px" height="20px" alt={skill.name} />
+                  <Progress
+                    mt={2}
+                    size="xs"
+                    rounded="full"
+                    colorScheme="purple"
+                    backgroundColor="gray.300"
+                    value={100 * (parseInt(skill.rate) / 5)}
+                  />
+                </Grid>
+              </GridItem>
+            ))}
+          </Grid>
         </Box>
       ))}
     </CardLayout>

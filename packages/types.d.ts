@@ -20,11 +20,11 @@ export interface Skill {
 }
 
 export interface Skills {
-  readonly programming_languages: Array<Skill>;
-  readonly dev_tools: readonly Array<Skill>;
-  readonly frontend: readonly Array<Skill>;
-  readonly backend: readonly Array<Skill>;
-  readonly infra: readonly Array<Skill>;
+  readonly 'Programming Languages': Array<Skill>;
+  readonly 'Development Tools': readonly Array<Skill>;
+  readonly 'Frontend': readonly Array<Skill>;
+  readonly 'Backend': readonly Array<Skill>;
+  readonly 'Infra': readonly Array<Skill>;
 }
 
 export interface Social {
@@ -36,6 +36,7 @@ export interface Social {
 declare module "@packages/config/resume.yml" {
   export const cover_letter: string;
   export const title: string;
+  export const resume_url: string;
   export const social: readonly Social;
   export const relevant_experiences: readonly Array<Experience>;
   export const education: readonly Array<Education>;

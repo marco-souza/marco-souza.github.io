@@ -1,6 +1,8 @@
 
 title: Sr. Software Engineer
 
+resume_url: https://drive.google.com/file/d/1tezazXzVS0P3i3_1lrJ8yg2UOGJfhVWP/view?usp=sharing
+
 social:
   linkedin: https://www.linkedin.com/in/masouzajunior
   stackoverflow: https://stackoverflow.com/users/7988674/marco-antônio/
@@ -14,7 +16,7 @@ cover_letter: >-
   *Thanks* for visiting my resume, and I hope we have a chance to connect! 😁
 
 relevant_experiences:
-  - company: Paradigm.co
+  - company: Paradigm
     job_title: Sr Software Development Engineer
     location: New York - remote from Brazil
     dates_employed: Jan 2021 – present
@@ -30,6 +32,14 @@ relevant_experiences:
     description: >
       Our mission is to be Earth’s most customer-centric company.
       This is what unites Amazonians across teams and geographies as we are all striving to delight our customers and make their lives easier, one innovative product, service, and idea at a time.
+
+  - company: GovPredict
+    job_title: Software Engineer
+    location: New York - remote form Brazil
+    dates_employed: May 2019 – Out 2019
+    tech_stack: [react, redux, redux-thunk, ruby-on-rails, docker, redis]
+    description: >
+      We build enterprise software for the government affairs community: the policy watchers who follow bills as they make their ways through Congress, the advocates who make their cases to Members, the grassroots organizers who fight or support them, and the committees who raise the next round of political donations.
 
   - company: Inkitt
     job_title: Tech Lead - Software Engineer
@@ -54,105 +64,90 @@ certificates:
     credential_url: https://www.youracclaim.com/badges/3e20fa2f-07c9-40aa-b486-9fbdaaef40fb?source=linked_in_profile
 
 skills:
-  programming_languages:
-    - name: TypeScript/JavaScript
-      icon: ??
+  Programming Languages:
+    - name: TypeScript
+      icon: https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg
+      rate: 5
+    - name: JavaScript
+      icon: https://cdn.iconscout.com/icon/free/png-256/javascript-2752148-2284965.png
       rate: 5
     - name: Python
-      icon: ??
+      icon: https://seeklogo.com/images/P/python-logo-A32636CAA3-seeklogo.com.png
       rate: 5
     - name: Golang
-      icon: ??
+      icon: https://cdn.worldvectorlogo.com/logos/gopher.svg
       rate: 3
     - name: Shell script
-      icon: ??
+      icon: https://bashlogo.com/img/symbol/svg/full_colored_dark.svg
       rate: 4
     - name: Kotlin/Java
-      icon: ??
-      rate: 4
-  dev_tools:
+      icon: https://cdn.worldvectorlogo.com/logos/kotlin-1.svg
+      rate: 3
+  Development Tools:
     - name: Linux
-      icon: ??
+      icon: https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/1200px-Tux.svg.png
       rate: 5
     - name: Docker
-      icon: ??
+      icon: https://cdn.iconscout.com/icon/free/png-512/docker-11-1175228.png
       rate: 5
     - name: Git
-      icon: ??
+      icon: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/1200px-Git_icon.svg.png
       rate: 5
     - name: Node.JS
-      icon: ??
+      icon: https://cdn.iconscout.com/icon/free/png-512/node-js-1174925.png
       rate: 5
     - name: Deno
-      icon: ??
+      icon: https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Deno.svg/1200px-Deno.svg.png
       rate: 4
-  frontend:
+  Frontend:
     - name: React
-      icon: ??
+      icon: https://camo.githubusercontent.com/7424dec3b89fbfc7a86de7e451d4165c1f8eb636495f7e6e73ebda55b9248ac2/68747470733a2f2f692e6962622e636f2f6e7737627756382f72656163742e706e67
       rate: 5
     - name: React Native
-      icon: ??
+      icon: https://cdn.iconscout.com/icon/free/png-512/react-1543566-1306069.png
       rate: 5
     - name: Electron
-      icon: ??
+      icon: https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Electron_Software_Framework_Logo.svg/1024px-Electron_Software_Framework_Logo.svg.png
       rate: 4
     - name: Next.js
-      icon: ??
+      icon: https://seeklogo.com/images/N/next-js-logo-8FCFF51DD2-seeklogo.com.png
       rate: 5
     - name: Redux
-      icon: ??
-      rate: 5
-    - name: Redux Toolkit (RTK)
-      icon: ??
+      icon: https://seeklogo.com/images/R/redux-logo-9CA6836C12-seeklogo.com.png
       rate: 5
     - name: Build tools (webpack, parcel, rollup)
-      icon: ??
+      icon: https://cdn.worldvectorlogo.com/logos/webpack.svg
       rate: 5
     - name: Service Workers
-      icon: ??
+      icon: https://developers.google.com/web/tools/workbox/images/workbox-icon192x192.png
       rate: 4
     - name: Progressive WebApps
-      icon: ??
+      icon: https://pwa.coach/img/pwa-logo.svg
       rate: 4
-  backend:
+  Backend:
     - name: Node.js (express,koa,fastify)
-      icon: ??
+      icon: https://cdn.iconscout.com/icon/free/png-512/node-js-1174925.png
       rate: 5
     - name: Redis
-      icon: ??
+      icon: https://cdn.worldvectorlogo.com/logos/redis.svg
       rate: 5
     - name: MongoDB
-      icon: ??
-      rate: 5
+      icon: https://img.icons8.com/color/452/mongodb.png
+      rate: 4
+    - name: SQL Databases (MySQL,MariaDB,PostgreSQL)
+      icon: https://image.flaticon.com/icons/png/128/2306/2306173.png
+      rate: 4
     - name: Elastic Stack (elk)
-      icon: ??
+      icon: https://cdn.worldvectorlogo.com/logos/elastic-stack.svg
       rate: 3
-    - name: MySQL databases (MySQL,MariaDB,PostgreSQL)
-      icon: ??
+  Infra:
+    - name: AWS Services (ecs, ecs, lambda, sns, sqs, dynamodb, others)
+      icon: https://cdn.worldvectorlogo.com/logos/aws-logo.svg
       rate: 4
-  infra:
-    - name: GNU/Linux
-      icon: ??
-      rate: 5
-    - name: Docker
-      icon: ??
-      rate: 5
     - name: Nomad
-      icon: ??
-      rate: 4
+      icon: https://cdn.worldvectorlogo.com/logos/nomad-2.svg
+      rate: 3
     - name: Kubernetes
-      icon: ??
+      icon: https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/1200px-Kubernetes_logo_without_workmark.svg.png
       rate: 3
-    - name: ECS / Fargate
-      icon: ??
-      rate: 3
-    - name: AWS DynamoDB
-      icon: ??
-      rate: 4
-    - name: SNS
-      icon: ??
-      rate: 5
-    - name: SQS
-      icon: ??
-      rate: 5
 
