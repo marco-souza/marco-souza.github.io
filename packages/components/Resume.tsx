@@ -37,7 +37,7 @@ function Resume() {
 function Sidebar() {
   const { name, avatar, description } = useGithubProfile();
   return (
-    <Box shadow="2xl">
+    <Box shadow="base">
       <Box height="18rem">
         <Box backgroundColor="blue.300" height="60%" p={10}></Box>
 
@@ -79,7 +79,11 @@ function Sidebar() {
 
 function CoverLetter() {
   return (
-    <CardLayout backgroundColor="purple" title="Cover Letter">
+    <CardLayout
+      backgroundColor="purple"
+      title="Cover Letter"
+      display={{ sm: "none", md: "inherit" }}
+    >
       {resume.cover_letter.split("\n").map((text: string) => (
         <Box key={text} margin="0.5rem 0" fontSize="0.9rem">
           <ReactMarkdown>{text}</ReactMarkdown>
@@ -123,7 +127,14 @@ function Experiences() {
       ))}
 
       <Box m="2rem 0 1rem" textAlign="center" fontSize="0.8rem">
-        <Link border="1px solid" p="5px 10px" borderRadius="md" color="blue.300" href={resume.social.linkedin} target="_blank">
+        <Link
+          border="1px solid"
+          p="5px 10px"
+          borderRadius="md"
+          color="blue.300"
+          href={resume.social.linkedin}
+          target="_blank"
+        >
           See more experiences <LinkedInIcon />
         </Link>
       </Box>
@@ -131,22 +142,26 @@ function Experiences() {
   );
 }
 
-interface CardLayoutProps extends Pick<BoxProps, "backgroundColor"> {
+interface CardLayoutProps extends Pick<BoxProps, "backgroundColor" | "display"> {
   readonly title: string;
   readonly children: ReactNode;
 }
 
-function CardLayout({ children, backgroundColor, title }: CardLayoutProps) {
+function CardLayout({ children, display, backgroundColor, title }: CardLayoutProps) {
   return (
-    <Box shadow="2xl">
-      <Box p={2} fontSize="1rem">
+    <Box shadow="base" display={display}>
+      <Box
+        p={2}
+        fontSize="1rem"
+        borderBottomColor={backgroundColor}
+        borderBottomWidth="0.5rem"
+      >
         <Heading as="h3" size="md" margin="1rem 0">
           {title}
         </Heading>
 
         <Box>{children}</Box>
       </Box>
-      <Box backgroundColor={backgroundColor} p="1" />
     </Box>
   );
 }
