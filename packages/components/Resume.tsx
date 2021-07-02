@@ -28,6 +28,7 @@ function Resume() {
         <Grid gap="1rem">
           <CoverLetter />
           <Experiences />
+          <Education />
         </Grid>
       </GridItem>
     </Grid>
@@ -80,7 +81,7 @@ function Sidebar() {
 function CoverLetter() {
   return (
     <CardLayout
-      backgroundColor="purple"
+      backgroundColor="blue.300"
       title="Cover Letter"
       display={{ sm: "none", md: "inherit" }}
     >
@@ -142,6 +143,25 @@ function Experiences() {
   );
 }
 
+function Education() {
+  const periodColor = useColorModeValue("gray.500", "gray.200");
+  return (
+    <CardLayout backgroundColor="red.300" title="Education">
+      {resume.education.map((exp) => (
+        <Box key={exp.institution} margin="1rem 0" fontSize="0.9rem">
+          <Heading as="h4" fontSize="1rem">
+            {exp.institution}
+          </Heading>
+          <Text color={periodColor} fontSize="0.8rem" mb="0.5rem">
+            {exp.period}
+          </Text>
+          <Text>{exp.field_of_study}</Text>
+        </Box>
+      ))}
+    </CardLayout>
+  );
+}
+
 interface CardLayoutProps extends Pick<BoxProps, "backgroundColor" | "display"> {
   readonly title: string;
   readonly children: ReactNode;
@@ -150,12 +170,7 @@ interface CardLayoutProps extends Pick<BoxProps, "backgroundColor" | "display"> 
 function CardLayout({ children, display, backgroundColor, title }: CardLayoutProps) {
   return (
     <Box shadow="base" display={display}>
-      <Box
-        p={2}
-        fontSize="1rem"
-        borderBottomColor={backgroundColor}
-        borderBottomWidth="0.5rem"
-      >
+      <Box p={2} fontSize="1rem" borderBottomColor={backgroundColor} borderBottomWidth="0.5rem">
         <Heading as="h3" size="md" margin="1rem 0">
           {title}
         </Heading>
