@@ -27,7 +27,6 @@ relevant_experiences:
     location: São Paulo - Brazil
     dates_employed: Oct 2019 – Mar 2021
     tech_stack: [aws, react, redux, redux-saga, kotlin, lambda, dynamodb, python, docker, elk, redis]
-    # employment_duration: "1 yr 6 mos" # TODO: can be calculated from above info (date-fns)
     description: >
       Our mission is to be Earth’s most customer-centric company.
       This is what unites Amazonians across teams and geographies as we are all striving to delight our customers and make their lives easier, one innovative product, service, and idea at a time.
