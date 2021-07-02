@@ -17,15 +17,16 @@ import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 
 import ToggleThemeButton from "./ToggleThemeButton";
 import { GithubIcon, LinkedInIcon, StackOverflowIcon } from "@packages/icons";
+import { social } from "@packages/config/resume.yml";
 
 const Links = ["Dashboard", "Projects", "Team"];
 
 type SocialElement = [string, ComponentWithAs<"svg", IconProps>];
 
 const socialElements: SocialElement[] = [
-  ["https://stackoverflow.com/users/7988674/marco-antônio/", StackOverflowIcon],
-  ["https://www.linkedin.com/in/masouzajunior/", LinkedInIcon],
-  ["https://github.com/marco-souza/", GithubIcon],
+  [social.linkedin, StackOverflowIcon],
+  [social.stackoverflow, LinkedInIcon],
+  [social.github, GithubIcon],
 ];
 
 interface NavLinkProps {
@@ -61,7 +62,7 @@ export default function NavigationMenu() {
 
   return (
     <>
-      <Box bg={useColorModeValue("gray.100", "gray.900")} px={4} position="fixed" w="100vw" top={0}>
+      <Box bg={useColorModeValue("gray.100", "gray.900")} px={4} position="fixed" w="100vw" top={0} shadow="base">
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <IconButton
             size={"md"}

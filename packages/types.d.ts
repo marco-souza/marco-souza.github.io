@@ -27,9 +27,16 @@ export interface Skills {
   readonly infra: readonly Array<Skill>;
 }
 
+export interface Social {
+  readonly linkedin: string
+  readonly stackoverflow: string
+  readonly github: string
+}
+
 declare module "@packages/config/resume.yml" {
   export const cover_letter: string;
   export const title: string;
+  export const social: readonly Social;
   export const relevant_experiences: readonly Array<Experience>;
   export const education: readonly Array<Education>;
   export const skills: readonly Skills;

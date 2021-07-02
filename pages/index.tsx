@@ -12,7 +12,7 @@ export default function Home({ github }: HomeProps) {
   const containerBgCollor = useColorModeValue("whitesmoke", "gray.700");
 
   return (
-    <Box backgroundColor={containerBgCollor} h="calc(100vh - 60px)" marginTop="60px" p={1}>
+    <Box backgroundColor={containerBgCollor}>
       <GithubProvider githubData={github}>
         <Head>
           {/* TODO: add below texts to configs */}
@@ -23,14 +23,13 @@ export default function Home({ github }: HomeProps) {
 
         <NavigationMenu />
 
-        <Container maxW="container.lg" marginTop={2}>
+        <Container maxW="container.lg" p={5} mt="60px">
           <main>
             <Heading marginBottom={2}> Resume </Heading>
 
             <Resume />
           </main>
 
-          <footer>Footer</footer>
         </Container>
       </GithubProvider>
     </Box>
