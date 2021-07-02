@@ -24,8 +24,8 @@ const Links = ["Dashboard", "Projects", "Team"];
 type SocialElement = [string, ComponentWithAs<"svg", IconProps>];
 
 const socialElements: SocialElement[] = [
-  [social.linkedin, StackOverflowIcon],
-  [social.stackoverflow, LinkedInIcon],
+  [social.stackoverflow, StackOverflowIcon],
+  [social.linkedin, LinkedInIcon],
   [social.github, GithubIcon],
 ];
 
