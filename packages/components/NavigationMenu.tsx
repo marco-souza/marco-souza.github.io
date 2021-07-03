@@ -19,7 +19,11 @@ import ToggleThemeButton from "./ToggleThemeButton";
 import { GithubIcon, LinkedInIcon, StackOverflowIcon } from "@packages/icons";
 import { social } from "@packages/config/resume.yml";
 
-const Links = ["Dashboard", "Projects", "Team"];
+const navLinks = [
+  { label: "Home", src: "/" },
+  { label: "Blog", src: "/blog" },
+  { label: "Resume", src: "/" },
+];
 
 type SocialElement = [string, ComponentWithAs<"svg", IconProps>];
 
@@ -60,6 +64,12 @@ export default function NavigationMenu() {
     </NavLink>
   ));
 
+  const menuItems = navLinks.map((link) => (
+    <NavLink key={link.label} href={link.src}>
+      {link.label}
+    </NavLink>
+  ));
+
   return (
     <>
       <Box
@@ -82,14 +92,20 @@ export default function NavigationMenu() {
 
           <HStack spacing={8} alignItems={"center"}>
             <Box>
-              <Text fontWeight="bold" fontFamily="Times New Roman" fontSize="3xl">
+              <Text
+                fontWeight="bold"
+                fontFamily="Times New Roman"
+                fontSize="3xl"
+              >
                 M.
               </Text>
             </Box>
-            <HStack as={"nav"} spacing={4} display={{ base: "none", md: "flex" }}>
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
-              ))}
+            <HStack
+              as={"nav"}
+              spacing={4}
+              display={{ base: "none", md: "flex" }}
+            >
+              {menuItems}
             </HStack>
             <Divider />
           </HStack>
@@ -104,9 +120,7 @@ export default function NavigationMenu() {
         {isOpen ? (
           <Box pb={4} display={{ md: "none" }}>
             <Stack as={"nav"} spacing={4}>
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
-              ))}
+              {menuItems}
             </Stack>
 
             <Flex justifyContent="center">{socialIcons}</Flex>
