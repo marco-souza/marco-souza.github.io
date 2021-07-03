@@ -21,14 +21,14 @@ import { LinkedInIcon } from "@packages/icons";
 function Resume() {
   return (
     <Grid templateColumns="1fr 2fr" gap={4}>
-      <GridItem colSpan={{ md: 1, sm: 2 }}>
+      <GridItem colSpan={{ md: 1, base: 2 }}>
         <Grid gap="1rem">
           <Sidebar />
           <Skills />
         </Grid>
       </GridItem>
 
-      <GridItem colSpan={{ md: 1, sm: 2 }}>
+    <GridItem colSpan={{ md: 1, base: 2 }}>
         <Grid gap="1rem">
           <CoverLetter />
           <Experiences />
