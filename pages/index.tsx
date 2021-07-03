@@ -1,41 +1,28 @@
 import Head from "next/head";
-import { Container, Heading, Box, useColorModeValue } from "@chakra-ui/react";
-import NavigationMenu from "@packages/components/NavigationMenu";
+import { Heading } from "@chakra-ui/react";
 import Resume from "@packages/components/Resume";
-import { GithubProvider, RawGithubProfile } from "@packages/features/github-profile";
-import Footer from "@packages/components/Footer";
+import {
+  GithubProvider,
+  RawGithubProfile,
+} from "@packages/features/github-profile";
 
 interface HomeProps {
   readonly github: RawGithubProfile;
 }
 
 export default function Home({ github }: HomeProps) {
-  const containerBgCollor = useColorModeValue("whitesmoke", "gray.700");
-
   return (
-    <Box backgroundColor={containerBgCollor}>
-      <GithubProvider githubData={github}>
-        <Head>
-          {/* TODO: add below texts to configs */}
-          <title>Resume - Marco Antônio</title>
-          <meta name="description" content="Code craftsman for a more scalable world" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
+    <GithubProvider githubData={github}>
+      <Head>
+        <title>Resume - Marco Antônio</title>
+      </Head>
 
-        <NavigationMenu />
+      <main>
+        <Heading marginBottom={2}> Resume </Heading>
 
-        <Container maxW="container.lg" p={5} mt="60px">
-          <main>
-            <Heading marginBottom={2}> Resume </Heading>
-
-            <Resume />
-          </main>
-
-        </Container>
-
-        <Footer />
-      </GithubProvider>
-    </Box>
+        <Resume />
+      </main>
+    </GithubProvider>
   );
 }
 

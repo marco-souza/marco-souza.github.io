@@ -2,8 +2,14 @@ import type { AppProps } from "next/app";
 import { ReactNode } from "react";
 import { ChakraProvider } from "@chakra-ui/react";
 
+import Layout from "@packages/components/Layout";
+
 function MyApp({ Component, pageProps }: AppProps) {
-  return renderProviders(<Component {...pageProps} />);
+  return renderProviders(
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  );
 }
 
 // Inject all root providers
