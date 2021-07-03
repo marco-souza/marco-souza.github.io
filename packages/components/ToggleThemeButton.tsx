@@ -5,5 +5,12 @@ export default function ToggleThemeButton() {
   const { toggleColorMode, colorMode } = useColorMode();
   const Icon = colorMode === "dark" ? SunIcon : MoonIcon;
 
-  return <IconButton rounded="md" aria-label="Toggle theme button" icon={<Icon />} onClick={toggleColorMode} />;
+  return (
+    <IconButton
+      rounded="md"
+      aria-label="Toggle theme button"
+      icon={<Icon />}
+      onClick={toggleColorMode}
+    />
+  );
 }

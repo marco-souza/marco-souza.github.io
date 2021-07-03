@@ -20,22 +20,22 @@ export interface Skill {
 }
 
 export interface Skills {
-  readonly 'Programming Languages': Array<Skill>;
-  readonly 'Development Tools': readonly Array<Skill>;
-  readonly 'Frontend': readonly Array<Skill>;
-  readonly 'Backend': readonly Array<Skill>;
-  readonly 'Infra': readonly Array<Skill>;
+  readonly "Programming Languages": Array<Skill>;
+  readonly "Development Tools": readonly Array<Skill>;
+  readonly Frontend: readonly Array<Skill>;
+  readonly Backend: readonly Array<Skill>;
+  readonly Infra: readonly Array<Skill>;
 }
 
 export interface Social {
-  readonly linkedin: string
-  readonly stackoverflow: string
-  readonly github: string
+  readonly linkedin: string;
+  readonly stackoverflow: string;
+  readonly github: string;
 }
 
 declare module "@packages/config/resume.yml" {
   export const cover_letter: string;
-  export const title: string;
+  export const job_title: string;
   export const resume_url: string;
   export const social: readonly Social;
   export const relevant_experiences: readonly Array<Experience>;

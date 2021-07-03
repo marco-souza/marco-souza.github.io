@@ -28,7 +28,7 @@ function Resume() {
         </Grid>
       </GridItem>
 
-    <GridItem colSpan={{ md: 1, base: 2 }}>
+      <GridItem colSpan={{ md: 1, base: 2 }}>
         <Grid gap="1rem">
           <CoverLetter />
           <Experiences />
@@ -54,7 +54,13 @@ function Sidebar() {
             rounded="full"
             margin="0 auto"
           >
-            <Image src={avatar} alt="Profile foto" padding={1} width={200} rounded="full" />
+            <Image
+              src={avatar}
+              alt="Profile foto"
+              padding={1}
+              width={200}
+              rounded="full"
+            />
           </SkeletonCircle>
         </Flex>
       </Box>
@@ -66,7 +72,7 @@ function Sidebar() {
           </SkeletonText>
         </Heading>
         <Text size="sm" color="gray.500">
-          {resume.title}
+          {resume.job_title}
         </Text>
 
         <Box margin="1rem 0.5rem">
@@ -190,9 +196,17 @@ function Skills() {
           </Heading>
           <Grid m={4} templateColumns="repeat(3, 1fr)" gap={2}>
             {skills.map((skill) => (
-              <GridItem key={skill.name} title={`${skill.name} - ${skill.rate}/5`}>
+              <GridItem
+                key={skill.name}
+                title={`${skill.name} - ${skill.rate}/5`}
+              >
                 <Grid templateColumns="30px auto">
-                  <Image src={skill.icon} width="20px" height="20px" alt={skill.name} />
+                  <Image
+                    src={skill.icon}
+                    width="20px"
+                    height="20px"
+                    alt={skill.name}
+                  />
                   <Progress
                     mt={2}
                     size="xs"
@@ -211,15 +225,26 @@ function Skills() {
   );
 }
 
-interface CardLayoutProps extends Pick<BoxProps, "backgroundColor" | "display"> {
+interface CardLayoutProps
+  extends Pick<BoxProps, "backgroundColor" | "display"> {
   readonly title: string;
   readonly children: ReactNode;
 }
 
-function CardLayout({ children, display, backgroundColor, title }: CardLayoutProps) {
+function CardLayout({
+  children,
+  display,
+  backgroundColor,
+  title,
+}: CardLayoutProps) {
   return (
     <Box shadow="base" display={display}>
-      <Box p={2} fontSize="1rem" borderBottomColor={backgroundColor} borderBottomWidth="0.5rem">
+      <Box
+        p={2}
+        fontSize="1rem"
+        borderBottomColor={backgroundColor}
+        borderBottomWidth="0.5rem"
+      >
         <Heading as="h3" size="md" marginBottom="1rem">
           {title}
         </Heading>

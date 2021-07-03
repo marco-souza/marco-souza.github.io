@@ -13,13 +13,13 @@ export interface RawGithubProfile {
   readonly bio: string;
 }
 
-const GithubProfileCtx = createContext<GithubProfile | null>(null)
+const GithubProfileCtx = createContext<GithubProfile | null>(null);
 
 export function useGithubProfile() {
-  const ctx = useContext(GithubProfileCtx)
+  const ctx = useContext(GithubProfileCtx);
   if (ctx == null)
-    throw new TypeError('Context not found, expected GithubProvider upwards!')
-  return ctx
+    throw new TypeError("Context not found, expected GithubProvider upwards!");
+  return ctx;
 }
 
 interface Props {
@@ -32,15 +32,10 @@ export function GithubProvider({ children, githubData }: Props) {
     <GithubProfileCtx.Provider value={processGithubProfile(githubData)}>
       {children}
     </GithubProfileCtx.Provider>
-  )
+  );
 }
 
-
 function processGithubProfile(rawGithubData: RawGithubProfile): GithubProfile {
-  const {
-    name,
-    avatar_url: avatar,
-    bio: description,
-  } = rawGithubData
-  return { avatar, name, description }
+  const { name, avatar_url: avatar, bio: description } = rawGithubData;
+  return { avatar, name, description };
 }

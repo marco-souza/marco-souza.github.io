@@ -1,5 +1,4 @@
-
-title: Sr. Software Engineer
+job_title: Sr. Software Engineer
 
 resume_url: https://drive.google.com/file/d/1tezazXzVS0P3i3_1lrJ8yg2UOGJfhVWP/view?usp=sharing
 
@@ -20,7 +19,19 @@ relevant_experiences:
     job_title: Sr Software Development Engineer
     location: New York - remote from Brazil
     dates_employed: Jan 2021 – present
-    tech_stack: [react, react-native, electron, redux, redux-toolkit, redux-saga, django, golang, docker, redis]
+    tech_stack:
+      [
+        react,
+        react-native,
+        electron,
+        redux,
+        redux-toolkit,
+        redux-saga,
+        django,
+        golang,
+        docker,
+        redis,
+      ]
     description: >
       Paradigm automates bilateral price negotiation and settlement workflows for institutional digital asset traders.
 
@@ -28,7 +39,20 @@ relevant_experiences:
     job_title: Software Development Engineer II
     location: São Paulo - Brazil
     dates_employed: Oct 2019 – Mar 2021
-    tech_stack: [aws, react, redux, redux-saga, kotlin, lambda, dynamodb, python, docker, elk, redis]
+    tech_stack:
+      [
+        aws,
+        react,
+        redux,
+        redux-saga,
+        kotlin,
+        lambda,
+        dynamodb,
+        python,
+        docker,
+        elk,
+        redis,
+      ]
     description: >
       Our mission is to be Earth’s most customer-centric company.
       This is what unites Amazonians across teams and geographies as we are all striving to delight our customers and make their lives easier, one innovative product, service, and idea at a time.
@@ -45,7 +69,8 @@ relevant_experiences:
     job_title: Tech Lead - Software Engineer
     location: Berlin - Germany
     dates_employed: Nov 2017 – Jun 2018
-    tech_stack: [react, react-native, redux, redux-thunk, ruby-on-rails, docker, redis]
+    tech_stack:
+      [react, react-native, redux, redux-thunk, ruby-on-rails, docker, redis]
     description: >
       Inkitt it's a Publisher company which aims to connect authors and readers and, based on that interaction, predicted which books have the potential to become Best Sellers
 
@@ -150,4 +175,3 @@ skills:
     - name: Kubernetes
       icon: https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/1200px-Kubernetes_logo_without_workmark.svg.png
       rate: 3
-
