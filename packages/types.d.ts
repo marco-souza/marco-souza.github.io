@@ -20,7 +20,7 @@ export interface Skill {
 }
 
 export interface Skills {
-  readonly "Programming Languages": Array<Skill>;
+  readonly "Programming Languages": readonly Array<Skill>;
   readonly "Development Tools": readonly Array<Skill>;
   readonly Frontend: readonly Array<Skill>;
   readonly Backend: readonly Array<Skill>;
