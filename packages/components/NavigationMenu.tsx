@@ -111,7 +111,7 @@ export default function NavigationMenu() {
           </HStack>
 
           <Flex alignItems={"center"}>
-            <Box display={{ sm: "none", md: "inherit" }}>{socialIcons}</Box>
+            <Box display={{ base: "none", md: "inherit" }}>{socialIcons}</Box>
 
             <ToggleThemeButton />
           </Flex>
