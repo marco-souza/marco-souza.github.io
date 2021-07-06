@@ -12,6 +12,7 @@ import {
   useColorModeValue,
   Link,
   Progress,
+  Tooltip,
 } from "@chakra-ui/react";
 import { useGithubProfile } from "@packages/features/github-profile";
 import resume, { Skill } from "@packages/config/resume.yml";
@@ -54,13 +55,7 @@ function Sidebar() {
             rounded="full"
             margin="0 auto"
           >
-            <Image
-              src={avatar}
-              alt="Profile foto"
-              padding={1}
-              width={200}
-              rounded="full"
-            />
+            <Image src={avatar} alt="Profile foto" padding={1} width={200} rounded="full" />
           </SkeletonCircle>
         </Flex>
       </Box>
@@ -196,26 +191,20 @@ function Skills() {
           </Heading>
           <Grid m={4} templateColumns="repeat(3, 1fr)" gap={2}>
             {skills.map((skill) => (
-              <GridItem
-                key={skill.name}
-                title={`${skill.name} - ${skill.rate}/5`}
-              >
-                <Grid templateColumns="30px auto">
-                  <Image
-                    src={skill.icon}
-                    width="20px"
-                    height="20px"
-                    alt={skill.name}
-                  />
-                  <Progress
-                    mt={2}
-                    size="xs"
-                    rounded="full"
-                    colorScheme="purple"
-                    backgroundColor="gray.300"
-                    value={100 * (parseInt(skill.rate) / 5)}
-                  />
-                </Grid>
+              <GridItem key={skill.name} title={`${skill.name} - ${skill.rate}/5`}>
+                <Tooltip label={skill.name} aria-label={skill.name}>
+                  <Grid templateColumns="30px auto">
+                    <Image src={skill.icon} width="20px" height="20px" alt={skill.name} />
+                    <Progress
+                      mt={2}
+                      size="xs"
+                      rounded="full"
+                      colorScheme="purple"
+                      backgroundColor="gray.300"
+                      value={100 * (parseInt(skill.rate) / 5)}
+                    />
+                  </Grid>
+                </Tooltip>
               </GridItem>
             ))}
           </Grid>
@@ -225,26 +214,15 @@ function Skills() {
   );
 }
 
-interface CardLayoutProps
-  extends Pick<BoxProps, "backgroundColor" | "display"> {
+interface CardLayoutProps extends Pick<BoxProps, "backgroundColor" | "display"> {
   readonly title: string;
   readonly children: ReactNode;
 }
 
-function CardLayout({
-  children,
-  display,
-  backgroundColor,
-  title,
-}: CardLayoutProps) {
+function CardLayout({ children, display, backgroundColor, title }: CardLayoutProps) {
   return (
     <Box shadow="base" display={display}>
-      <Box
-        p={2}
-        fontSize="1rem"
-        borderBottomColor={backgroundColor}
-        borderBottomWidth="0.5rem"
-      >
+      <Box p={2} fontSize="1rem" borderBottomColor={backgroundColor} borderBottomWidth="0.5rem">
         <Heading as="h3" size="md" marginBottom="1rem">
           {title}
         </Heading>
