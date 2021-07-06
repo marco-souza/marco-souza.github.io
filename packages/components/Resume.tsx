@@ -192,7 +192,7 @@ function Skills() {
           <Grid m={4} templateColumns="repeat(3, 1fr)" gap={2}>
             {skills.map((skill) => (
               <GridItem key={skill.name} title={`${skill.name} - ${skill.rate}/5`}>
-                <Tooltip label={skill.name} aria-label={skill.name}>
+                <Tooltip hasArrow label={skill.name} aria-label={skill.name}>
                   <Grid templateColumns="30px auto">
                     <Image src={skill.icon} width="20px" height="20px" alt={skill.name} />
                     <Progress
