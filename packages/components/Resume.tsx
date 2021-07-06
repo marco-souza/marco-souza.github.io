@@ -120,10 +120,10 @@ function Experiences() {
       {resume.relevant_experiences.map((experience) => (
         <Box key={experience.company} m="2rem 0 1rem" fontSize="0.9rem">
           <Heading as="h4" fontSize="1rem">
-            {experience.company}
+          {experience.job_title}
           </Heading>
           <Text color={employDateColor} fontSize="0.8rem" mb="0.5rem">
-            {experience.dates_employed}
+          {experience.company}, {experience.dates_employed}
             {/* TODO: calculate time worked using date-fns */}
           </Text>
           <Text>{experience.description}</Text>
