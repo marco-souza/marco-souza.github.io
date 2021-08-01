@@ -20,9 +20,8 @@ import { GithubIcon, LinkedInIcon, StackOverflowIcon } from "@packages/icons";
 import { social } from "@packages/config/resume.yml";
 
 const navLinks = [
-  { label: "Home", src: "/" },
+  { label: "Resume", src: "/resume" },
   { label: "Blog", src: "/blog" },
-  { label: "Resume", src: "/" },
 ];
 
 type SocialElement = [string, ComponentWithAs<"svg", IconProps>];
@@ -91,7 +90,7 @@ export default function NavigationMenu() {
           />
 
           <HStack spacing={8} alignItems={"center"}>
-            <Box>
+            <Link href="/">
               <Text
                 fontWeight="bold"
                 fontFamily="Times New Roman"
@@ -99,7 +98,7 @@ export default function NavigationMenu() {
               >
                 M.
               </Text>
-            </Box>
+            </Link>
             <HStack
               as={"nav"}
               spacing={4}

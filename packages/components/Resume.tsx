@@ -121,10 +121,10 @@ function Experiences() {
       {resume.relevant_experiences.map((experience) => (
         <Box key={experience.company} m="2rem 0 1rem" fontSize="0.9rem">
           <Heading as="h4" fontSize="1rem">
-          {experience.job_title}
+            {experience.job_title}
           </Heading>
           <Text color={employDateColor} fontSize="0.8rem" mb="0.5rem">
-          {experience.company}, {experience.dates_employed}
+            {experience.company}, {experience.dates_employed}
             {/* TODO: calculate time worked using date-fns */}
           </Text>
           <Text>{experience.description}</Text>
@@ -223,7 +223,12 @@ interface CardLayoutProps extends Pick<BoxProps, "backgroundColor" | "display"> 
 function CardLayout({ children, display, backgroundColor, title }: CardLayoutProps) {
   return (
     <Box shadow="base" display={display}>
-      <Box p={2} fontSize="1rem" borderBottomColor={backgroundColor} borderBottomWidth="0.5rem">
+      <Box
+        p="1rem 2rem"
+        fontSize="1rem"
+        borderBottomColor={backgroundColor}
+        borderBottomWidth="0.5rem"
+      >
         <Heading as="h3" size="md" marginBottom="1rem">
           {title}
         </Heading>

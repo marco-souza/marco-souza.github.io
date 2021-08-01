@@ -12,7 +12,7 @@ export default function Layout({ children }: HomeProps) {
   const containerBgCollor = useColorModeValue("whitesmoke", "gray.700");
 
   return (
-    <Box backgroundColor={containerBgCollor} minH="100vh">
+    <Box backgroundColor={containerBgCollor} minH="calc(100vh - 64px)">
       <Head>
         <meta
           name="description"
@@ -23,7 +23,7 @@ export default function Layout({ children }: HomeProps) {
 
       <NavigationMenu />
 
-      <Container maxW="container.lg" p={5} mt="60px">
+      <Container maxW="container.lg" p={5} mt="60px" minH="85vh">
         {children}
       </Container>
 
