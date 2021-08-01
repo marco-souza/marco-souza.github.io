@@ -42,7 +42,6 @@ function Home() {
           color="pink.500"
           borderColor="pink.500"
           fontSize="0.8rem"
-          // width="full"
         >
           CONTACT ME
         </Button>

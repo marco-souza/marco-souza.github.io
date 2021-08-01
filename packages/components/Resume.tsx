@@ -44,7 +44,7 @@ function Resume() {
 function Sidebar() {
   const { name, avatar, description } = useGithubProfile();
   return (
-    <Box shadow="base" bgColor="white">
+    <Box shadow="base" bg={useColorModeValue('whitesmoke', 'gray.800')}>
       <Box height="18rem">
         <Box backgroundColor="blue.300" height="60%" p={10}></Box>
 
@@ -98,7 +98,6 @@ function Sidebar() {
         </Box>
       </Box>
 
-      {/* // TODO: add "download resume" button */}
       <Box backgroundColor="tomato" p="1" />
     </Box>
   );
@@ -214,7 +213,7 @@ function Skills() {
                       mt={2}
                       size="xs"
                       rounded="full"
-                      colorScheme="purple"
+                      colorScheme="pink"
                       backgroundColor="gray.300"
                       value={100 * (parseInt(skill.rate) / 5)}
                     />
@@ -246,7 +245,7 @@ function CardLayout({
       <Box
         p="1rem 2rem"
         fontSize="1rem"
-        bgColor="white"
+        bg={useColorModeValue('whitesmoke', 'gray.800')}
         borderBottomColor={backgroundColor}
         borderBottomWidth="0.5rem"
       >
