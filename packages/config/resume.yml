@@ -47,7 +47,19 @@ relevant_experiences:
     location: São Paulo - Brazil
     dates_employed: Oct 2019 – Mar 2021
     tech_stack:
-      [aws, react, redux, redux-saga, kotlin, lambda, dynamodb, python, docker, elk, redis]
+      [
+        aws,
+        react,
+        redux,
+        redux-saga,
+        kotlin,
+        lambda,
+        dynamodb,
+        python,
+        docker,
+        elk,
+        redis,
+      ]
     description: >
       Our mission is to be Earth’s most customer-centric company.
       This is what unites Amazonians across teams and geographies as we are all striving to delight our customers and make their lives easier, one innovative product, service, and idea at a time.
@@ -64,7 +76,8 @@ relevant_experiences:
     job_title: Tech Lead - Software Engineer
     location: Berlin - Germany
     dates_employed: Nov 2017 – Jun 2018
-    tech_stack: [react, react-native, redux, redux-thunk, ruby-on-rails, docker, redis]
+    tech_stack:
+      [react, react-native, redux, redux-thunk, ruby-on-rails, docker, redis]
     description: >
       Inkitt it's a Publisher company which aims to connect authors and readers and, based on that interaction, predicted which books have the potential to become Best Sellers
 

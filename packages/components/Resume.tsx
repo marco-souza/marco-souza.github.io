@@ -56,7 +56,13 @@ function Sidebar() {
             rounded="full"
             margin="0 auto"
           >
-            <Image src={avatar} alt="Profile foto" padding={1} width={200} rounded="full" />
+            <Image
+              src={avatar}
+              alt="Profile foto"
+              padding={1}
+              width={200}
+              rounded="full"
+            />
           </SkeletonCircle>
         </Flex>
       </Box>
@@ -192,10 +198,18 @@ function Skills() {
           </Heading>
           <Grid m={4} templateColumns="repeat(3, 1fr)" gap={2}>
             {skills.map((skill) => (
-              <GridItem key={skill.name} title={`${skill.name} - ${skill.rate}/5`}>
+              <GridItem
+                key={skill.name}
+                title={`${skill.name} - ${skill.rate}/5`}
+              >
                 <Tooltip hasArrow label={skill.name} aria-label={skill.name}>
                   <Grid templateColumns="30px auto">
-                    <Image src={skill.icon} width="20px" height="20px" alt={skill.name} />
+                    <Image
+                      src={skill.icon}
+                      width="20px"
+                      height="20px"
+                      alt={skill.name}
+                    />
                     <Progress
                       mt={2}
                       size="xs"
@@ -215,12 +229,18 @@ function Skills() {
   );
 }
 
-interface CardLayoutProps extends Pick<BoxProps, "backgroundColor" | "display"> {
+interface CardLayoutProps
+  extends Pick<BoxProps, "backgroundColor" | "display"> {
   readonly title: string;
   readonly children: ReactNode;
 }
 
-function CardLayout({ children, display, backgroundColor, title }: CardLayoutProps) {
+function CardLayout({
+  children,
+  display,
+  backgroundColor,
+  title,
+}: CardLayoutProps) {
   return (
     <Box shadow="base" display={display}>
       <Box

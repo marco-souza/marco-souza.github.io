@@ -1,4 +1,12 @@
-import { Button, Flex, Grid, Heading, Image, Link, Text } from "@chakra-ui/react";
+import {
+  Button,
+  Flex,
+  Grid,
+  Heading,
+  Image,
+  Link,
+  Text,
+} from "@chakra-ui/react";
 import { useGithubProfile } from "@packages/features/github-profile";
 import { home } from "@packages/config/resume.yml";
 import Markdown from "./Markdown";
@@ -16,7 +24,10 @@ function Home() {
     >
       <Image src={github.avatar} alt="Me" w="10rem" m="0 auto" rounded="full" />
       <Heading>{github.name}</Heading>
-      <Text as="h2" p={{ base: "0", md: "0 8rem", lg: "0 10rem" }}>
+      <Text
+        as="h2"
+        p={{ base: "0", sm: "0 3rem", md: "0 8rem", lg: "0 10rem" }}
+      >
         <Markdown>{home.description}</Markdown>
       </Text>
       <Grid
