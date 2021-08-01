@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Container, Box, useColorModeValue } from '@chakra-ui/react';
+import { Container, Box, useColorModeValue, baseStyle } from '@chakra-ui/react';
 import NavigationMenu from '@packages/components/NavigationMenu';
 import Footer from '@packages/components/Footer';
 import { ReactNode } from 'react-markdown';
@@ -23,7 +23,12 @@ export default function Layout({ children }: HomeProps) {
 
       <NavigationMenu />
 
-      <Container maxW="container.lg" p={5} mt="60px" minH="85vh">
+      <Container
+        maxW="container.lg"
+        p={5}
+        mt="60px"
+        minH={{ base: '0', md: '85vh' }}
+      >
         {children}
       </Container>
 

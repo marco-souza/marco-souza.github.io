@@ -17,8 +17,7 @@ function Home() {
     <Grid
       rowGap="2rem"
       alignItems="center"
-      // w="60%"
-      m="5rem auto"
+      m={{ base: '3rem auto 1rem', sm: '5rem auto 1rem' }}
       flexDir="column"
       textAlign="center"
     >
