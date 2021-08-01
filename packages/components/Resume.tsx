@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import {
   Box,
   Grid,
@@ -16,8 +17,8 @@ import {
 } from "@chakra-ui/react";
 import { useGithubProfile } from "@packages/features/github-profile";
 import resume, { Skill } from "@packages/config/resume.yml";
-import ReactMarkdown, { ReactNode } from "react-markdown";
 import { LinkedInIcon } from "@packages/icons";
+import Markdown from "./Markdown";
 
 function Resume() {
   return (
@@ -106,7 +107,7 @@ function CoverLetter() {
     >
       {resume.cover_letter.split("\n").map((text: string) => (
         <Box key={text} margin="0.5rem 0" fontSize="0.9rem">
-          <ReactMarkdown>{text}</ReactMarkdown>
+          <Markdown>{text}</Markdown>
         </Box>
       ))}
     </CardLayout>
