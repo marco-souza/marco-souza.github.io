@@ -6,10 +6,10 @@ import {
   Image,
   Link,
   Text,
-} from "@chakra-ui/react";
-import { useGithubProfile } from "@packages/features/github-profile";
-import { home } from "@packages/config/resume.yml";
-import Markdown from "./Markdown";
+} from '@chakra-ui/react';
+import { useGithubProfile } from '@packages/features/github-profile';
+import { home } from '@packages/config/resume.yml';
+import Markdown from './Markdown';
 
 function Home() {
   const github = useGithubProfile();
@@ -26,15 +26,15 @@ function Home() {
       <Heading>{github.name}</Heading>
       <Text
         as="h2"
-        p={{ base: "0", sm: "0 3rem", md: "0 8rem", lg: "0 10rem" }}
+        p={{ base: '0', sm: '0 3rem', md: '0 8rem', lg: '0 10rem' }}
       >
         <Markdown>{home.description}</Markdown>
       </Text>
       <Grid
         gap="1rem"
         m="0 auto"
-        w={{ base: "full", sm: "50%" }}
-        gridTemplateColumns={{ base: "auto", sm: "auto auto" }}
+        w={{ base: 'full', sm: '50%' }}
+        gridTemplateColumns={{ base: 'auto', sm: 'auto auto' }}
       >
         <Button
           as={Link}
@@ -52,7 +52,7 @@ function Home() {
           href="/resume"
           variant="outline"
           fontSize="0.8rem"
-          _hover={{ borderColor: "gray.500" }}
+          _hover={{ borderColor: 'gray.500' }}
         >
           RESUME
         </Button>

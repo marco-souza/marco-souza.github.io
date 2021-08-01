@@ -1,9 +1,9 @@
-import Head from "next/head";
+import Head from 'next/head';
 import {
   GithubProvider,
   RawGithubProfile,
-} from "@packages/features/github-profile";
-import Resume from "@packages/components/Resume";
+} from '@packages/features/github-profile';
+import Resume from '@packages/components/Resume';
 
 interface HomeProps {
   readonly github: RawGithubProfile;
@@ -28,7 +28,7 @@ interface StaticProps {
 }
 
 export async function getStaticProps(): Promise<StaticProps> {
-  const res = await fetch("https://api.github.com/users/marco-souza");
+  const res = await fetch('https://api.github.com/users/marco-souza');
   const github = await res.json();
   return {
     props: { github }, // will be passed to the page component as props

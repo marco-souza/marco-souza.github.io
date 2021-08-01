@@ -1,14 +1,14 @@
-import type { AppProps } from "next/app";
-import { ReactNode } from "react";
-import { ChakraProvider } from "@chakra-ui/react";
+import type { AppProps } from 'next/app';
+import { ReactNode } from 'react';
+import { ChakraProvider } from '@chakra-ui/react';
 
-import Layout from "@packages/components/Layout";
+import Layout from '@packages/components/Layout';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return renderProviders(
     <Layout>
       <Component {...pageProps} />
-    </Layout>
+    </Layout>,
   );
 }
 
@@ -20,7 +20,7 @@ function renderProviders(children: ReactNode) {
     (aggregated, CurrentProvider) => (
       <CurrentProvider>{aggregated}</CurrentProvider>
     ),
-    children
+    children,
   );
 }
 

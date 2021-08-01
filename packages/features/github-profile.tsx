@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useContext } from "react";
+import { createContext, ReactNode, useContext } from 'react';
 
 export interface GithubProfile {
   readonly description: string;
@@ -18,7 +18,7 @@ const GithubProfileCtx = createContext<GithubProfile | null>(null);
 export function useGithubProfile() {
   const ctx = useContext(GithubProfileCtx);
   if (ctx == null)
-    throw new TypeError("Context not found, expected GithubProvider upwards!");
+    throw new TypeError('Context not found, expected GithubProvider upwards!');
   return ctx;
 }
 

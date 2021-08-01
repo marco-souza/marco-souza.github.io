@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode } from 'react';
 import {
   Box,
   Flex,
@@ -12,19 +12,19 @@ import {
   ComponentWithAs,
   IconProps,
   Divider,
-} from "@chakra-ui/react";
-import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+} from '@chakra-ui/react';
+import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
-import ToggleThemeButton from "./ToggleThemeButton";
-import { GithubIcon, LinkedInIcon, StackOverflowIcon } from "@packages/icons";
-import { social } from "@packages/config/resume.yml";
+import ToggleThemeButton from './ToggleThemeButton';
+import { GithubIcon, LinkedInIcon, StackOverflowIcon } from '@packages/icons';
+import { social } from '@packages/config/resume.yml';
 
 const navLinks = [
-  { label: "Resume", src: "/resume" },
-  { label: "Blog", src: "/blog" },
+  { label: 'Resume', src: '/resume' },
+  { label: 'Blog', src: '/blog' },
 ];
 
-type SocialElement = [string, ComponentWithAs<"svg", IconProps>];
+type SocialElement = [string, ComponentWithAs<'svg', IconProps>];
 
 const socialElements: SocialElement[] = [
   [social.stackoverflow, StackOverflowIcon],
@@ -38,14 +38,14 @@ interface NavLinkProps {
   readonly target?: string;
 }
 
-const NavLink = ({ children, target, href = "#" }: NavLinkProps) => (
+const NavLink = ({ children, target, href = '#' }: NavLinkProps) => (
   <Link
     px={2}
     py={1}
-    rounded={"md"}
+    rounded={'md'}
     _hover={{
-      textDecoration: "none",
-      bg: useColorModeValue("gray.200", "gray.700"),
+      textDecoration: 'none',
+      bg: useColorModeValue('gray.200', 'gray.700'),
     }}
     target={target}
     href={href}
@@ -72,7 +72,7 @@ export default function NavigationMenu() {
   return (
     <>
       <Box
-        bg={useColorModeValue("whitesmoke", "gray.900")}
+        bg={useColorModeValue('whitesmoke', 'gray.900')}
         px={4}
         position="fixed"
         w="100%"
@@ -80,16 +80,16 @@ export default function NavigationMenu() {
         shadow="base"
         zIndex={2}
       >
-        <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+        <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
-            size={"md"}
+            size={'md'}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-            aria-label={"Open Menu"}
-            display={{ md: "none" }}
+            aria-label={'Open Menu'}
+            display={{ md: 'none' }}
             onClick={isOpen ? onClose : onOpen}
           />
 
-          <HStack spacing={8} alignItems={"center"}>
+          <HStack spacing={8} alignItems={'center'}>
             <Link href="/">
               <Text
                 fontWeight="bold"
@@ -100,25 +100,25 @@ export default function NavigationMenu() {
               </Text>
             </Link>
             <HStack
-              as={"nav"}
+              as={'nav'}
               spacing={4}
-              display={{ base: "none", md: "flex" }}
+              display={{ base: 'none', md: 'flex' }}
             >
               {menuItems}
             </HStack>
             <Divider />
           </HStack>
 
-          <Flex alignItems={"center"}>
-            <Box display={{ base: "none", md: "inherit" }}>{socialIcons}</Box>
+          <Flex alignItems={'center'}>
+            <Box display={{ base: 'none', md: 'inherit' }}>{socialIcons}</Box>
 
             <ToggleThemeButton />
           </Flex>
         </Flex>
 
         {isOpen ? (
-          <Box pb={4} display={{ md: "none" }}>
-            <Stack as={"nav"} spacing={4}>
+          <Box pb={4} display={{ md: 'none' }}>
+            <Stack as={'nav'} spacing={4}>
               {menuItems}
             </Stack>
 

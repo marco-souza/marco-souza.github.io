@@ -20,8 +20,8 @@ export interface Skill {
 }
 
 export interface Skills {
-  readonly "Programming Languages": readonly Array<Skill>;
-  readonly "Development Tools": readonly Array<Skill>;
+  readonly 'Programming Languages': readonly Array<Skill>;
+  readonly 'Development Tools': readonly Array<Skill>;
   readonly Frontend: readonly Array<Skill>;
   readonly Backend: readonly Array<Skill>;
   readonly Infra: readonly Array<Skill>;
@@ -33,7 +33,7 @@ export interface Social {
   readonly github: string;
 }
 
-declare module "@packages/config/resume.yml" {
+declare module '@packages/config/resume.yml' {
   export const cover_letter: string;
   export const job_title: string;
   export const resume_url: string;

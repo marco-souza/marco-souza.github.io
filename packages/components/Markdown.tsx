@@ -1,6 +1,6 @@
-import { Link } from "@chakra-ui/react";
-import ReactMarkdown, { ReactMarkdownOptions } from "react-markdown";
-import { ReactMarkdownProps } from "react-markdown/src/ast-to-react";
+import { Link } from '@chakra-ui/react';
+import ReactMarkdown, { ReactMarkdownOptions } from 'react-markdown';
+import { ReactMarkdownProps } from 'react-markdown/src/ast-to-react';
 
 interface Props {
   readonly children: string;

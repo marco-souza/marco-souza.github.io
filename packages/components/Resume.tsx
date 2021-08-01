@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 import {
   Box,
   Grid,
@@ -14,11 +14,11 @@ import {
   Link,
   Progress,
   Tooltip,
-} from "@chakra-ui/react";
-import { useGithubProfile } from "@packages/features/github-profile";
-import resume, { Skill } from "@packages/config/resume.yml";
-import { LinkedInIcon } from "@packages/icons";
-import Markdown from "./Markdown";
+} from '@chakra-ui/react';
+import { useGithubProfile } from '@packages/features/github-profile';
+import resume, { Skill } from '@packages/config/resume.yml';
+import { LinkedInIcon } from '@packages/icons';
+import Markdown from './Markdown';
 
 function Resume() {
   return (
@@ -52,7 +52,7 @@ function Sidebar() {
           <SkeletonCircle
             width="200"
             height="200"
-            isLoaded={avatar !== ""}
+            isLoaded={avatar !== ''}
             rounded="full"
             margin="0 auto"
           >
@@ -69,7 +69,7 @@ function Sidebar() {
 
       <Box textAlign="center" m={1}>
         <Heading as="h2" size="md">
-          <SkeletonText isLoaded={name !== ""} noOfLines={1} margin={4}>
+          <SkeletonText isLoaded={name !== ''} noOfLines={1} margin={4}>
             {name}
           </SkeletonText>
         </Heading>
@@ -78,7 +78,7 @@ function Sidebar() {
         </Text>
 
         <Box margin="1rem 0.5rem">
-          <SkeletonText isLoaded={description !== ""} noOfLines={3} margin={4}>
+          <SkeletonText isLoaded={description !== ''} noOfLines={3} margin={4}>
             {description}
           </SkeletonText>
         </Box>
@@ -109,9 +109,9 @@ function CoverLetter() {
     <CardLayout
       backgroundColor="blue.300"
       title="Cover Letter"
-      display={{ sm: "none", md: "inherit" }}
+      display={{ sm: 'none', md: 'inherit' }}
     >
-      {resume.cover_letter.split("\n").map((text: string) => (
+      {resume.cover_letter.split('\n').map((text: string) => (
         <Box key={text} margin="0.5rem 0" fontSize="0.9rem">
           <Markdown>{text}</Markdown>
         </Box>
@@ -121,7 +121,7 @@ function CoverLetter() {
 }
 
 function Experiences() {
-  const employDateColor = useColorModeValue("gray.500", "gray.200");
+  const employDateColor = useColorModeValue('gray.500', 'gray.200');
   return (
     <CardLayout backgroundColor="green.300" title="Relevant Experiences">
       {resume.relevant_experiences.map((experience) => (
@@ -142,8 +142,8 @@ function Experiences() {
                 color="blue.300"
                 marginRight="0.5rem"
                 _hover={{
-                  color: "teal.500",
-                  cursor: "pointer",
+                  color: 'teal.500',
+                  cursor: 'pointer',
                 }}
               >
                 {`#${tech} `}
@@ -170,7 +170,7 @@ function Experiences() {
 }
 
 function Education() {
-  const periodColor = useColorModeValue("gray.500", "gray.200");
+  const periodColor = useColorModeValue('gray.500', 'gray.200');
   return (
     <CardLayout backgroundColor="pink.200" title="Education">
       {resume.education.map((exp) => (
@@ -230,7 +230,7 @@ function Skills() {
 }
 
 interface CardLayoutProps
-  extends Pick<BoxProps, "backgroundColor" | "display"> {
+  extends Pick<BoxProps, 'backgroundColor' | 'display'> {
   readonly title: string;
   readonly children: ReactNode;
 }

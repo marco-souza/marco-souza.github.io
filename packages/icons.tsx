@@ -1,8 +1,8 @@
-import { createIcon } from "@chakra-ui/react";
+import { createIcon } from '@chakra-ui/react';
 
 export const GithubIcon = createIcon({
-  displayName: "GithubIcon",
-  viewBox: "0 0 20 20",
+  displayName: 'GithubIcon',
+  viewBox: '0 0 20 20',
   // path can also be an array of elements, if you have multiple paths, lines, shapes, etc.
   path: (
     <path
@@ -13,8 +13,8 @@ export const GithubIcon = createIcon({
 });
 
 export const LinkedInIcon = createIcon({
-  displayName: "LinkedInIcon",
-  viewBox: "0 0 24 24",
+  displayName: 'LinkedInIcon',
+  viewBox: '0 0 24 24',
   // path can also be an array of elements, if you have multiple paths, lines, shapes, etc.
   path: (
     <path
@@ -25,8 +25,8 @@ export const LinkedInIcon = createIcon({
 });
 
 export const StackOverflowIcon = createIcon({
-  displayName: "StackOverflowIcon",
-  viewBox: "0 0 24 24",
+  displayName: 'StackOverflowIcon',
+  viewBox: '0 0 24 24',
   // path can also be an array of elements, if you have multiple paths, lines, shapes, etc.
   path: (
     <path

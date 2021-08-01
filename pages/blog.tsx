@@ -1,5 +1,5 @@
-import Head from "next/head";
-import { Heading, Text } from "@chakra-ui/react";
+import Head from 'next/head';
+import { Heading, Text } from '@chakra-ui/react';
 
 export default function BlogPage() {
   return (
