@@ -9,17 +9,22 @@ function Home() {
     <Grid
       rowGap="2rem"
       alignItems="center"
-      w="60%"
+      // w="60%"
       m="5rem auto"
       flexDir="column"
       textAlign="center"
     >
       <Image src={github.avatar} alt="Me" w="10rem" m="0 auto" rounded="full" />
       <Heading>{github.name}</Heading>
-      <Text as="h2">
+      <Text as="h2" p={{ base: "0", md: "0 8rem", lg: "0 10rem" }}>
         <Markdown>{home.description}</Markdown>
       </Text>
-      <Grid gap="1rem" m="0 auto" gridTemplateColumns="repeat(2, auto)" p="0 5rem">
+      <Grid
+        gap="1rem"
+        m="0 auto"
+        w={{ base: "full", sm: "50%" }}
+        gridTemplateColumns={{ base: "auto", sm: "auto auto" }}
+      >
         <Button
           as={Link}
           href={home.email_link}
@@ -27,6 +32,7 @@ function Home() {
           color="pink.500"
           borderColor="pink.500"
           fontSize="0.8rem"
+          // width="full"
         >
           CONTACT ME
         </Button>
