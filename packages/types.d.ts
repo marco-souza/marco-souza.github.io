@@ -41,4 +41,8 @@ declare module "@packages/config/resume.yml" {
   export const relevant_experiences: readonly Array<Experience>;
   export const education: readonly Array<Education>;
   export const skills: readonly Skills;
+  export const home: {
+    description: string;
+    email_link: string;
+  };
 }

@@ -1,9 +1,9 @@
 import Head from "next/head";
-import Home from "@packages/components/Home";
 import {
   GithubProvider,
   RawGithubProfile,
 } from "@packages/features/github-profile";
+import Resume from "@packages/components/Resume";
 
 interface HomeProps {
   readonly github: RawGithubProfile;
@@ -17,7 +17,7 @@ export default function HomePage({ github }: HomeProps) {
       </Head>
 
       <main>
-        <Home />
+        <Resume />
       </main>
     </GithubProvider>
   );
