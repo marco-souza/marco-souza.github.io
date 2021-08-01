@@ -24,7 +24,7 @@ interface MdLinkProps extends ReactMarkdownProps {
 }
 
 function MdLink({children, href}: MdLinkProps) {
-  return <Link color="pink.200" target="_blank" href={href}>{children}</Link>
+  return <Link color="pink.300" target="_blank" href={href}>{children}</Link>
 }
 
 export default Markdown

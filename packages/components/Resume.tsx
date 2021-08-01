@@ -44,7 +44,7 @@ function Resume() {
 function Sidebar() {
   const { name, avatar, description } = useGithubProfile();
   return (
-    <Box shadow="base">
+    <Box shadow="base" bgColor="white">
       <Box height="18rem">
         <Box backgroundColor="blue.300" height="60%" p={10}></Box>
 
@@ -226,6 +226,7 @@ function CardLayout({ children, display, backgroundColor, title }: CardLayoutPro
       <Box
         p="1rem 2rem"
         fontSize="1rem"
+        bgColor="white"
         borderBottomColor={backgroundColor}
         borderBottomWidth="0.5rem"
       >

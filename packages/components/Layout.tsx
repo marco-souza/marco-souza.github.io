@@ -9,7 +9,7 @@ interface HomeProps {
 }
 
 export default function Layout({ children }: HomeProps) {
-  const containerBgCollor = useColorModeValue("whitesmoke", "gray.700");
+  const containerBgCollor = useColorModeValue("gray.100", "gray.700");
 
   return (
     <Box backgroundColor={containerBgCollor} minH="calc(100vh - 64px)">

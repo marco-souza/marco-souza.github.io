@@ -72,7 +72,7 @@ export default function NavigationMenu() {
   return (
     <>
       <Box
-        bg={useColorModeValue("gray.100", "gray.900")}
+        bg={useColorModeValue("whitesmoke", "gray.900")}
         px={4}
         position="fixed"
         w="100%"
