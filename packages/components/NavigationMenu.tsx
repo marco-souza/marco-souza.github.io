@@ -12,6 +12,7 @@ import {
   ComponentWithAs,
   IconProps,
   Divider,
+  Container,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
@@ -80,51 +81,53 @@ export default function NavigationMenu() {
         shadow="base"
         zIndex={2}
       >
-        <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-          <IconButton
-            size={'md'}
-            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-            aria-label={'Open Menu'}
-            display={{ md: 'none' }}
-            onClick={isOpen ? onClose : onOpen}
-          />
+        <Container maxW="container.lg">
+          <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
+            <IconButton
+              size={'md'}
+              icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+              aria-label={'Open Menu'}
+              display={{ md: 'none' }}
+              onClick={isOpen ? onClose : onOpen}
+            />
 
-          <HStack spacing={8} alignItems={'center'}>
-            <Link href="/">
-              <Text
-                fontWeight="bold"
-                fontFamily="Times New Roman"
-                fontSize="3xl"
+            <HStack spacing={8} alignItems={'center'}>
+              <Link href="/">
+                <Text
+                  fontWeight="bold"
+                  fontFamily="Times New Roman"
+                  fontSize="3xl"
+                >
+                  M.
+                </Text>
+              </Link>
+              <HStack
+                as={'nav'}
+                spacing={4}
+                display={{ base: 'none', md: 'flex' }}
               >
-                M.
-              </Text>
-            </Link>
-            <HStack
-              as={'nav'}
-              spacing={4}
-              display={{ base: 'none', md: 'flex' }}
-            >
-              {menuItems}
+                {menuItems}
+              </HStack>
+              <Divider />
             </HStack>
-            <Divider />
-          </HStack>
 
-          <Flex alignItems={'center'}>
-            <Box display={{ base: 'none', md: 'inherit' }}>{socialIcons}</Box>
+            <Flex alignItems={'center'}>
+              <Box display={{ base: 'none', md: 'inherit' }}>{socialIcons}</Box>
 
-            <ToggleThemeButton />
+              <ToggleThemeButton />
+            </Flex>
           </Flex>
-        </Flex>
 
-        {isOpen ? (
-          <Box pb={4} display={{ md: 'none' }}>
-            <Stack as={'nav'} spacing={4}>
-              {menuItems}
-            </Stack>
+          {isOpen ? (
+            <Box pb={4} display={{ md: 'none' }}>
+              <Stack as={'nav'} spacing={4}>
+                {menuItems}
+              </Stack>
 
-            <Flex justifyContent="center">{socialIcons}</Flex>
-          </Box>
-        ) : null}
+              <Flex justifyContent="center">{socialIcons}</Flex>
+            </Box>
+          ) : null}
+        </Container>
       </Box>
     </>
   );
