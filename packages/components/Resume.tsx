@@ -122,7 +122,7 @@ function CoverLetter() {
 function Experiences() {
   const employDateColor = useColorModeValue('gray.500', 'gray.200');
   return (
-    <CardLayout backgroundColor="green.300" title="Relevant Experiences">
+    <CardLayout backgroundColor="blue.300" title="Relevant Experiences">
       {resume.relevant_experiences.map((experience) => (
         <Box key={experience.company} m="2rem 0 1rem" fontSize="0.9rem">
           <Heading as="h4" fontSize="1rem">
@@ -171,7 +171,7 @@ function Experiences() {
 function Education() {
   const periodColor = useColorModeValue('gray.500', 'gray.200');
   return (
-    <CardLayout backgroundColor="pink.200" title="Education">
+    <CardLayout backgroundColor="blue.300" title="Education">
       {resume.education.map((exp) => (
         <Box key={exp.institution} margin="1rem 0" fontSize="0.9rem">
           <Heading as="h4" fontSize="1rem">
@@ -189,7 +189,7 @@ function Education() {
 
 function Skills() {
   return (
-    <CardLayout backgroundColor="blue.600" title="Skills">
+    <CardLayout backgroundColor="blue.300" title="Skills">
       {Object.entries(resume.skills).map(([key, skills]: [string, Skill[]]) => (
         <Box key={key} fontSize="0.9rem">
           <Heading as="h4" fontSize="1rem">
@@ -197,11 +197,12 @@ function Skills() {
           </Heading>
           <Grid m={4} templateColumns="repeat(3, 1fr)" gap={2}>
             {skills.map((skill) => (
-              <GridItem
-                key={skill.name}
-                title={`${skill.name} - ${skill.rate}/5`}
-              >
-                <Tooltip hasArrow label={skill.name} aria-label={skill.name}>
+              <GridItem key={skill.name}>
+                <Tooltip
+                  hasArrow
+                  aria-label={skill.name}
+                  label={`${skill.name} - ${skill.rate}/5`}
+                >
                   <Grid templateColumns="30px auto">
                     <Image
                       src={skill.icon}
@@ -213,7 +214,7 @@ function Skills() {
                       mt={2}
                       size="xs"
                       rounded="full"
-                      colorScheme="pink"
+                      colorScheme="red"
                       backgroundColor="gray.300"
                       value={100 * (parseInt(skill.rate) / 5)}
                     />
