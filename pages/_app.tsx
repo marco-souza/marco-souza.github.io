@@ -3,6 +3,7 @@ import { ReactNode } from 'react';
 import { ChakraProvider } from '@chakra-ui/react';
 
 import Layout from '@packages/components/Layout';
+import MdxProvider from '@packages/features/mdx-provider';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return renderProviders(
@@ -13,7 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 }
 
 // Inject all root providers
-const providers = [ChakraProvider];
+const providers = [MdxProvider, ChakraProvider];
 
 function renderProviders(children: ReactNode) {
   return providers.reduce(
