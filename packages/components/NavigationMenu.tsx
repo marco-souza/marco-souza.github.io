@@ -1,4 +1,5 @@
-import React, { ReactNode } from 'react';
+import NextLink from 'next/link';
+import { ReactNode } from 'react';
 import {
   Box,
   Flex,
@@ -40,19 +41,20 @@ interface NavLinkProps {
 }
 
 const NavLink = ({ children, target, href = '#' }: NavLinkProps) => (
-  <Link
-    px={2}
-    py={1}
-    rounded={'md'}
-    _hover={{
-      textDecoration: 'none',
-      bg: useColorModeValue('gray.200', 'gray.700'),
-    }}
-    target={target}
-    href={href}
-  >
-    {children}
-  </Link>
+  <NextLink href={href}>
+    <Link
+      px={2}
+      py={1}
+      rounded={'md'}
+      _hover={{
+        textDecoration: 'none',
+        bg: useColorModeValue('gray.200', 'gray.700'),
+      }}
+      target={target}
+    >
+      {children}
+    </Link>
+  </NextLink>
 );
 
 export default function NavigationMenu() {
