@@ -32,4 +32,4 @@ jobs:
           BRANCH: gh-pages
           FOLDER: dist
         env:
-          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: "true"

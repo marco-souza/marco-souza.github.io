@@ -7,11 +7,16 @@
     "start": "vite",
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "fmt": "prettier -w .",
+    "prepare": "husky install"
   },
   "license": "MIT",
   "devDependencies": {
     "@unocss/reset": "^0.34.1",
+    "husky": "^8.0.1",
+    "lint-staged": "^12.4.2",
+    "prettier": "^2.6.2",
     "typescript": "^4.7.2",
     "unocss": "^0.34.1",
     "vite": "^2.9.9",
@@ -23,5 +28,8 @@
     "solid-app-router": "^0.3.3",
     "solid-js": "^1.4.3",
     "solid-meta": "^0.27.5"
+  },
+  "lint-staged": {
+    "**/*": "pnpm fmt"
   }
 }

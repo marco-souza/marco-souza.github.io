@@ -1,0 +1,4 @@
+build
+
+# ignore hiden files
+.*

@@ -7,7 +7,6 @@ import { ChildrenProps, Container } from "./shared";
 export const Layout: Component<ChildrenProps> = (props) => {
   return (
     <div class="min-h-screen bg-gray-700">
-
       {/* Meta tags */}
       <Title>{site.title}</Title>
       <Link rel="canonical" href="http://solidjs.com/" />
