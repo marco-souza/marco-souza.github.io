@@ -13,7 +13,7 @@ export const Layout: Component<ChildrenProps> = (props) => {
       <Meta name="description" content={site.description} />
 
       <Navbar />
-      <Container>{props.children}</Container>
+      <Container class="py20">{props.children}</Container>
     </div>
   );
 };

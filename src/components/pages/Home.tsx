@@ -5,7 +5,7 @@ import { ButtonLink } from "../shared";
 
 export const Home: Component = () => {
   return (
-    <div class="my10 grid grid-cols-1 items-center text-center text-gray-200">
+    <div class="grid grid-cols-1 items-center text-center text-gray-200">
       <img
         alt="It's Me"
         src={site.avatarUrl}
