@@ -13,7 +13,8 @@
     "isolatedModules": true,
     "baseUrl": "./src",
     "paths": {
-      "~/*": ["./*"]
+      "~/*": ["./*"],
+      "@pages/*": ["./components/pages/*"]
     }
   }
 }

@@ -1,7 +1,7 @@
 import type { Component } from "solid-js";
-import { site } from "../settings";
+import { site } from "../../settings";
 
-import { ButtonLink } from "./shared";
+import { ButtonLink } from "../shared";
 
 export const Home: Component = () => {
   return (
@@ -33,5 +33,7 @@ export const Home: Component = () => {
     </div>
   );
 };
+
+export default Home;
 
 const buttonAnimation = "animate-bounce-alt animate-count-1 animate-1s";
