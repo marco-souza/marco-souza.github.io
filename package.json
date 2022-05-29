@@ -11,7 +11,7 @@
   "license": "MIT",
   "devDependencies": {
     "@unocss/reset": "^0.34.1",
-    "typescript": "^4.6.4",
+    "typescript": "^4.7.2",
     "unocss": "^0.34.1",
     "vite": "^2.9.9",
     "vite-plugin-solid": "^2.2.6",
@@ -19,6 +19,8 @@
     "vite-tsconfig-paths": "^3.5.0"
   },
   "dependencies": {
-    "solid-js": "^1.4.2"
+    "solid-app-router": "^0.3.3",
+    "solid-js": "^1.4.3",
+    "solid-meta": "^0.27.5"
   }
 }

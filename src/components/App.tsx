@@ -1,12 +1,15 @@
+import { Router } from "solid-app-router";
 import type { Component } from "solid-js";
-import { Home } from "~/components/Home";
 import { Layout } from "~/components/Layout";
+import RootRouter from "~/routes";
 
 const App: Component = () => {
   return (
-    <Layout>
-      <Home />
-    </Layout>
+    <Router>
+      <Layout>
+        <RootRouter />
+      </Layout>
+    </Router>
   );
 };
 
