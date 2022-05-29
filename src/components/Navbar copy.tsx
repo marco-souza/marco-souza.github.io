@@ -6,27 +6,42 @@ import {
   StackOverflowIcon,
 } from "~/components/icons";
 import { Logo } from "~/components/Logo";
-import { Container } from "~/components/shared";
+import { ButtonLink, Container } from "~/components/shared";
 
 const [menuIsOpen, setMenuIsOpen] = createSignal(false);
 
 export const Navbar: Component = () => {
   return (
-    <nav class="bg-gray-900 absolute left-0 right-0 top-0 z-10 py4">
-      {/* Desktop View */}
-      <Container class="hidden md:flex items-center justify-between">
+    <nav class="bg-gray-900 absolute left-0 right-0 top-0 z-10">
+      <Container class="hidden md:flex items-center justify-between py4">
+        {/* Desktop View */}
         <div class="flex justify-between">
           <span class="mr-4">
             <Logo />
           </span>
+
           <NavLinks />
         </div>
 
-        <SocialLinks />
+        {/* <SocialLinks /> */}
+
+        <ul class={`grid gap-4 grid-cols-${socialLinks.length} text-gray-400`}>
+          {socialLinks.map((item) => (
+            <li>
+              <a
+                class="rounded-lg hover:text-gray-200"
+                target="_blank"
+                href={item.link}
+              >
+                {item.component}
+              </a>
+            </li>
+          ))}
+        </ul>
       </Container>
 
       {/* Mobile View */}
-      <Container class="md:hidden flex items-center justify-around">
+      <Container class="md:hidden flex items-center justify-around py4">
         <MenuButton />
         <Logo />
       </Container>
@@ -60,26 +75,24 @@ const navigationLinks = [
   { link: "/blog", title: "Blog" },
 ];
 
-const NavLinks: Component = () => {
-  return (
-    <ul
-      class={`grid gap-4 md:grid-cols-${navigationLinks.length} items-center font-light text-gray-300`}
-    >
-      {navigationLinks.map((item) => (
-        <li>
-          <a class="rounded-lg p-2 py-1 hover:bg-gray-700" href={item.link}>
-            {item.title}
-          </a>
-        </li>
-      ))}
-    </ul>
-  );
-};
+const NavLinks: Component = () => (
+  <ul
+    class={`grid gap-4 md:grid-cols-${navigationLinks.length} items-center font-light text-gray-300`}
+  >
+    {navigationLinks.map((item) => (
+      <li>
+        <a class="rounded-lg p-2 py-1 hover:bg-gray-700" href={item.link}>
+          {item.title}
+        </a>
+      </li>
+    ))}
+  </ul>
+);
 
 const socialLinks = [
-  { link: links.stackoverflow, component: StackOverflowIcon },
-  { link: links.linkedin, component: LinkedinIcon },
-  { link: links.github, component: GithubIcon },
+  { link: links.stackoverflow, component: <StackOverflowIcon /> },
+  { link: links.linkedin, component: <LinkedinIcon /> },
+  { link: links.github, component: <GithubIcon /> },
 ];
 
 const SocialLinks: Component = () => (
@@ -91,7 +104,7 @@ const SocialLinks: Component = () => (
           target="_blank"
           href={item.link}
         >
-          <item.component />
+          {item.component}
         </a>
       </li>
     ))}
