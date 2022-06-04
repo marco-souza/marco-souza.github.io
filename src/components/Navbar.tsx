@@ -14,7 +14,7 @@ export const Navbar: Component = () => {
   return (
     <nav class="bg-gray-900 absolute left-0 right-0 top-0 z-10 py4">
       {/* Desktop View */}
-      <Container class="hidden md:flex items-center justify-between">
+      <Container class="hidden sm:flex items-center justify-between">
         <div class="flex justify-between">
           <span class="mr-4">
             <Logo />
@@ -26,11 +26,11 @@ export const Navbar: Component = () => {
       </Container>
 
       {/* Mobile View */}
-      <Container class="md:hidden flex items-center justify-around">
+      <Container class="sm:hidden flex items-center justify-around">
         <MenuButton />
         <Logo />
       </Container>
-      <Container class="md:hidden text-center">
+      <Container class="sm:hidden text-center">
         <div class={`py4 ${menuIsOpen() ? "inline-grid" : "hidden"} gap-8`}>
           <NavLinks />
           <SocialLinks />
@@ -43,7 +43,7 @@ export const Navbar: Component = () => {
 const MenuButton: Component = () => {
   return (
     <button
-      class="md:hidden absolute left-0 mx-4 px-4 text-white"
+      class="sm:hidden absolute left-0 mx-4 px-4 text-white"
       onClick={() => setMenuIsOpen((val) => !val)}
     >
       <svg fill="white" viewBox="0 0 100 80" width="32" height="32">
@@ -63,7 +63,7 @@ const navigationLinks = [
 const NavLinks: Component = () => {
   return (
     <ul
-      class={`grid gap-4 md:grid-cols-${navigationLinks.length} items-center font-light text-gray-300`}
+      class={`grid gap-4 grid-cols-${navigationLinks.length} items-center font-light text-gray-300`}
     >
       {navigationLinks.map((item) => (
         <li>

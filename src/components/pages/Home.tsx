@@ -16,7 +16,7 @@ export const Home: Component = () => {
 
       <div class="op70 fw300 m1 text-md text-gray-400">{site.subtitle}</div>
 
-      <div class="grid gap-8 grid-cols-1 my-10 md:mx-20 md:grid-cols-2">
+      <div class="grid gap-8 grid-cols-1 my-10 sm:mx-20 sm:grid-cols-2">
         <ButtonLink
           to={site.cta.primary.link}
           class={`text-pink-400 ${buttonAnimation}`}
