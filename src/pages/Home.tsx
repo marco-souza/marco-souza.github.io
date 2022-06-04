@@ -1,11 +1,10 @@
 import type { Component } from "solid-js";
 import { profile } from "virtual:github";
 
-import { site } from "~/settings";
+import { site, links } from "~/settings";
 import { ButtonLink } from "~/components/shared";
 
 export const Home: Component = () => {
-  console.log(profile.avatar_url);
   return (
     <div class="grid grid-cols-1 items-center text-center text-gray-200">
       <img
@@ -16,7 +15,10 @@ export const Home: Component = () => {
 
       <div class="text-3xl fw100">{profile.name}</div>
 
-      <div class="op70 fw300 m1 text-md text-gray-400">{`${profile.bio}`}</div>
+      <div
+        class="op70 fw300 m1 text-md text-gray-400 sm:px20 md:px40"
+        innerHTML={parseBioText(profile.bio)}
+      />
 
       <div class="grid gap-8 grid-cols-1 my-10 sm:mx-20 sm:grid-cols-2">
         <ButtonLink
@@ -35,6 +37,19 @@ export const Home: Component = () => {
     </div>
   );
 };
+
+function parseBioText(text: string) {
+  const tagRegex = /\@(\w*)/g;
+  const linksMap: Map<string, string> = new Map(Object.entries(links));
+
+  return text.replace(tagRegex, (originalText, name: string) => {
+    const link = linksMap.get(name);
+
+    if (link)
+      return `<a class="text-pink-400" href="${link}">${originalText}</a>`;
+    return originalText;
+  });
+}
 
 export default Home;
 
