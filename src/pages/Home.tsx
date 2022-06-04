@@ -1,7 +1,7 @@
 import type { Component } from "solid-js";
-import { site } from "../../settings";
+import { site } from "../settings";
 
-import { ButtonLink } from "../shared";
+import { ButtonLink } from "../components/shared";
 
 export const Home: Component = () => {
   return (
