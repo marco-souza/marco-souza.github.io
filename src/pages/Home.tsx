@@ -1,20 +1,22 @@
 import type { Component } from "solid-js";
-import { site } from "../settings";
+import { profile } from "virtual:github";
 
-import { ButtonLink } from "../components/shared";
+import { site } from "~/settings";
+import { ButtonLink } from "~/components/shared";
 
 export const Home: Component = () => {
+  console.log(profile.avatar_url);
   return (
     <div class="grid grid-cols-1 items-center text-center text-gray-200">
       <img
         alt="It's Me"
-        src={site.avatarUrl}
+        src={profile.avatar_url}
         class="my10 h-40 mx-auto rounded-full"
       />
 
-      <div class="text-3xl fw100">{site.title}</div>
+      <div class="text-3xl fw100">{profile.name}</div>
 
-      <div class="op70 fw300 m1 text-md text-gray-400">{site.subtitle}</div>
+      <div class="op70 fw300 m1 text-md text-gray-400">{`${profile.bio}`}</div>
 
       <div class="grid gap-8 grid-cols-1 my-10 sm:mx-20 sm:grid-cols-2">
         <ButtonLink

@@ -11,10 +11,10 @@
     "types": ["vite/client"],
     "noEmit": true,
     "isolatedModules": true,
-    "baseUrl": "./src",
+    "baseUrl": "./",
     "paths": {
-      "~/*": ["./*"],
-      "@pages/*": ["./components/pages/*"]
+      "~/*": ["./src/*"],
+      "@pages/*": ["./src/pages/*"]
     }
   }
 }

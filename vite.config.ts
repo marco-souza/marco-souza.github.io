@@ -1,8 +1,9 @@
-import { defineConfig } from "vite";
+import { defineConfig, Plugin } from "vite";
 import solidPlugin from "vite-plugin-solid";
 import Unocss from "unocss/vite";
 import { presetUno, presetWebFonts } from "unocss";
 import tsconfigPaths from "vite-tsconfig-paths";
+import { githubPlugin } from "./plugins/github-plugin";
 
 const times = (length: number) => Array.from({ length }).map((_, i) => i + 1);
 
@@ -24,7 +25,12 @@ const unoCssSetup = Unocss({
 });
 
 const config = defineConfig({
-  plugins: [solidPlugin(), tsconfigPaths(), unoCssSetup],
+  plugins: [
+    solidPlugin(),
+    tsconfigPaths(),
+    githubPlugin({ username: "marco-souza" }),
+    ...unoCssSetup,
+  ],
   build: {
     target: "esnext",
     polyfillDynamicImport: false,
