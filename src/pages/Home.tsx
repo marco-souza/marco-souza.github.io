@@ -3,6 +3,7 @@ import { profile } from "virtual:github";
 import { config } from "virtual:config";
 
 import { ButtonLink } from "~/components/shared";
+import { parseBioText } from "~/shared/formatters";
 
 const { site, links } = config;
 
@@ -39,19 +40,6 @@ export const Home: Component = () => {
     </div>
   );
 };
-
-function parseBioText(text: string) {
-  const tagRegex = /\@(\w*)/g;
-  const linksMap: Map<string, string> = new Map(Object.entries(links));
-
-  return text.replace(tagRegex, (originalText, name: string) => {
-    const link = linksMap.get(name);
-
-    if (link)
-      return `<a class="text-pink-400" target="blank" href="${link}">${originalText}</a>`;
-    return originalText;
-  });
-}
 
 export default Home;
 
