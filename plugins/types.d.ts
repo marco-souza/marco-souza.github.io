@@ -26,10 +26,6 @@ declare module "virtual:config" {
 }
 
 interface Config {
-  readonly home: {
-    readonly description: string;
-    readonly email_link: string;
-  };
   readonly cover_letter: string;
   readonly job_title: string;
   readonly resume_url: string;
