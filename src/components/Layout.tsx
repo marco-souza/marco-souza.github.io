@@ -1,9 +1,12 @@
 import { Component } from "solid-js";
 import { Link, Meta, Title } from "solid-meta";
-import { site } from "~/settings";
+import { config } from "virtual:config";
+
 import { Footer } from "./Footer";
 import { Navbar } from "./Navbar";
 import { ChildrenProps, Container } from "./shared";
+
+const { site } = config;
 
 export const Layout: Component<ChildrenProps> = (props) => {
   return (

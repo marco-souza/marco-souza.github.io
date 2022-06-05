@@ -1,5 +1,5 @@
 import { Component, createSignal } from "solid-js";
-import { links } from "~/settings";
+import { config } from "virtual:config";
 import {
   GithubIcon,
   LinkedinIcon,
@@ -8,6 +8,7 @@ import {
 import { Logo } from "~/components/Logo";
 import { Container } from "~/components/shared";
 
+const { links } = config;
 const [menuIsOpen, setMenuIsOpen] = createSignal(false);
 
 export const Navbar: Component = () => {

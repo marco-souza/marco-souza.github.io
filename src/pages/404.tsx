@@ -1,6 +1,8 @@
 import type { Component } from "solid-js";
 import { Title } from "solid-meta";
-import { site } from "~/settings";
+import { config } from "virtual:config";
+
+const { site } = config;
 
 export const Page404: Component = () => {
   return (

@@ -1,10 +1,13 @@
 import type { Component } from "solid-js";
 import { profile } from "virtual:github";
+import { config } from "virtual:config";
 
-import { site, links } from "~/settings";
 import { ButtonLink } from "~/components/shared";
 
+const { site, links } = config;
+
 export const Home: Component = () => {
+  console.log(config);
   return (
     <div class="grid grid-cols-1 items-center text-center text-gray-200">
       <img
