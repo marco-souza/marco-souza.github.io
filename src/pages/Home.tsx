@@ -49,7 +49,7 @@ function parseBioText(text: string) {
     const link = linksMap.get(name);
 
     if (link)
-      return `<a class="text-pink-400" href="${link}">${originalText}</a>`;
+      return `<a class="text-pink-400" target="blank" href="${link}">${originalText}</a>`;
     return originalText;
   });
 }
