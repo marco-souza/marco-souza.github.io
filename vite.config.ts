@@ -3,7 +3,9 @@ import solidPlugin from "vite-plugin-solid";
 import Unocss from "unocss/vite";
 import { presetUno, presetWebFonts } from "unocss";
 import tsconfigPaths from "vite-tsconfig-paths";
+
 import { githubPlugin } from "./plugins/github-plugin";
+import { configPlugin } from "./plugins/yaml-config-plugin";
 
 const times = (length: number) => Array.from({ length }).map((_, i) => i + 1);
 
@@ -27,8 +29,9 @@ const unoCssSetup = Unocss({
 const config = defineConfig({
   plugins: [
     solidPlugin(),
-    tsconfigPaths(),
+    configPlugin({ relativePath: "./src/settings.yml" }),
     githubPlugin({ username: "marco-souza" }),
+    tsconfigPaths(),
     ...unoCssSetup,
   ],
   build: {

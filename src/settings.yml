@@ -1,0 +1,193 @@
+job_title: Sr. Software & Cloud Engineer
+
+site:
+  title: "Marco Antônio"
+  description: "Code craftsman for an scalable world."
+  cta:
+    primary: { text: "Contact me", link: "/contact" }
+    secondary: { text: "Resume", link: "/resume" }
+
+home:
+  description: >-
+    Sr. Software Developer, contractor, and consultant. Owner of [TremTec](https://tremtec.com) Accelerator and organizer of [PodCodar](https://podcodar.com) Code School.
+  email_link: mailto:marco@tremtec.com?subject=Hi Marco?body=Hey, let's have a coffee?
+
+resume_url: https://drive.google.com/file/d/1tezazXzVS0P3i3_1lrJ8yg2UOGJfhVWP/view?usp=sharing
+
+links:
+  stackoverflow: "https://stackoverflow.com/users/7988674/marco-antônio/"
+  linkedin: "https://www.linkedin.com/in/masouzajunior"
+  github: "https://github.com/marco-souza"
+  podcodar: "https://podcodar.com/"
+  paradigm: "https://paradigm.co/"
+
+cover_letter: >-
+  Hello, my name is **Marco Antônio**, and I build software for the web **for more than 10 years**.
+
+  Most of my experiences come from building frontend-heavy apps, extensively working with **Typescript/JavaScript**, **Node.js**, and **React**. But in my career, I used many different hats, so I also have experience working as a **Backend Engineer**, and **Cloud Engineer**, creating high availability services in great companies, *including [Amazon](https://amazon.com)*.
+
+  Nowadays, I spend my free time building new careers at *[PodCodar](https://podcodar.com)*, a technology education community focused on training professionals.
+
+  *Thanks* for visiting my resume, and I hope we have a chance to connect! 😁
+
+relevant_experiences:
+  - company: Paradigm
+    job_title: Sr Software Development Engineer
+    location: New York - remote from Brazil
+    dates_employed: Jan 2021 – present
+    tech_stack:
+      [
+        react,
+        react-native,
+        electron,
+        redux,
+        redux-toolkit,
+        redux-saga,
+        django,
+        golang,
+        docker,
+        redis,
+      ]
+    description: >
+      Paradigm automates bilateral price negotiation and settlement workflows for institutional digital asset traders.
+
+  - company: Amazon
+    job_title: Software Development Engineer II
+    location: São Paulo - Brazil
+    dates_employed: Oct 2019 – Mar 2021
+    tech_stack:
+      [
+        aws,
+        react,
+        redux,
+        redux-saga,
+        kotlin,
+        lambda,
+        dynamodb,
+        python,
+        docker,
+        elk,
+        redis,
+      ]
+    description: >
+      Our mission is to be Earth’s most customer-centric company.
+      This is what unites Amazonians across teams and geographies as we are all striving to delight our customers and make their lives easier, one innovative product, service, and idea at a time.
+
+  - company: GovPredict
+    job_title: Software Engineer
+    location: New York - remote form Brazil
+    dates_employed: May 2019 – Out 2019
+    tech_stack: [react, redux, redux-thunk, ruby-on-rails, docker, redis]
+    description: >
+      We build enterprise software for the government affairs community: the policy watchers who follow bills as they make their ways through Congress, the advocates who make their cases to Members, the grassroots organizers who fight or support them, and the committees who raise the next round of political donations.
+
+  - company: Inkitt
+    job_title: Tech Lead - Software Engineer
+    location: Berlin - Germany
+    dates_employed: Nov 2017 – Jun 2018
+    tech_stack:
+      [react, react-native, redux, redux-thunk, ruby-on-rails, docker, redis]
+    description: >
+      Inkitt it's a Publisher company which aims to connect authors and readers and, based on that interaction, predicted which books have the potential to become Best Sellers
+
+education:
+  - institution: Universidade Federal de Minas Gerais
+    field_of_study: Matemática Computacional
+    period: 2012 – 2017
+  - institution: Centro Federal de Educação Tecnológica de Minas Gerais
+    field_of_study: Tecnologia da Informação
+    period: 2009 – 2011
+
+certificates:
+  - title: AWS Certified Cloud Practitioner
+    issuing_authority: Amazon Web Services (AWS)
+    period: Oct 2020 - Oct 2023
+    credential_url: https://www.youracclaim.com/badges/3e20fa2f-07c9-40aa-b486-9fbdaaef40fb?source=linked_in_profile
+
+skills:
+  Programming Languages:
+    - name: TypeScript
+      icon: https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg
+      rate: 5
+    - name: JavaScript
+      icon: https://cdn.iconscout.com/icon/free/png-256/javascript-2752148-2284965.png
+      rate: 5
+    - name: Python
+      icon: https://seeklogo.com/images/P/python-logo-A32636CAA3-seeklogo.com.png
+      rate: 5
+    - name: Golang
+      icon: https://cdn.worldvectorlogo.com/logos/gopher.svg
+      rate: 3
+    - name: Shell script
+      icon: https://bashlogo.com/img/symbol/svg/full_colored_dark.svg
+      rate: 4
+    - name: Kotlin/Java
+      icon: https://cdn.worldvectorlogo.com/logos/kotlin-1.svg
+      rate: 3
+  Development Tools:
+    - name: Linux
+      icon: https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/1200px-Tux.svg.png
+      rate: 5
+    - name: Docker
+      icon: https://cdn.iconscout.com/icon/free/png-512/docker-11-1175228.png
+      rate: 5
+    - name: Git
+      icon: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/1200px-Git_icon.svg.png
+      rate: 5
+    - name: Node.JS
+      icon: https://cdn.iconscout.com/icon/free/png-512/node-js-1174925.png
+      rate: 5
+    - name: Deno
+      icon: https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Deno.svg/1200px-Deno.svg.png
+      rate: 4
+  Frontend:
+    - name: React
+      icon: https://camo.githubusercontent.com/7424dec3b89fbfc7a86de7e451d4165c1f8eb636495f7e6e73ebda55b9248ac2/68747470733a2f2f692e6962622e636f2f6e7737627756382f72656163742e706e67
+      rate: 5
+    - name: React Native
+      icon: https://cdn.iconscout.com/icon/free/png-512/react-1543566-1306069.png
+      rate: 5
+    - name: Electron
+      icon: https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Electron_Software_Framework_Logo.svg/1024px-Electron_Software_Framework_Logo.svg.png
+      rate: 4
+    - name: Next.js
+      icon: https://seeklogo.com/images/N/next-js-logo-8FCFF51DD2-seeklogo.com.png
+      rate: 5
+    - name: Redux, Redux Toolkit (RTK)
+      icon: https://seeklogo.com/images/R/redux-logo-9CA6836C12-seeklogo.com.png
+      rate: 5
+    - name: Build tools (webpack, parcel, rollup)
+      icon: https://cdn.worldvectorlogo.com/logos/webpack.svg
+      rate: 5
+    - name: Service Workers
+      icon: https://developers.google.com/web/tools/workbox/images/workbox-icon192x192.png
+      rate: 4
+    - name: Progressive WebApps
+      icon: https://pwa.coach/img/pwa-logo.svg
+      rate: 4
+  Backend:
+    - name: Node.js (express,koa,fastify)
+      icon: https://cdn.iconscout.com/icon/free/png-512/node-js-1174925.png
+      rate: 5
+    - name: Redis
+      icon: https://cdn.worldvectorlogo.com/logos/redis.svg
+      rate: 5
+    - name: MongoDB
+      icon: https://img.icons8.com/color/452/mongodb.png
+      rate: 4
+    - name: SQL Databases (MySQL,MariaDB,PostgreSQL)
+      icon: https://image.flaticon.com/icons/png/128/2306/2306173.png
+      rate: 4
+    - name: Elastic Stack (elk)
+      icon: https://cdn.worldvectorlogo.com/logos/elastic-stack.svg
+      rate: 3
+  Infra:
+    - name: AWS Services (ecs, ecs, lambda, sns, sqs, dynamodb, others)
+      icon: https://cdn.worldvectorlogo.com/logos/aws-logo.svg
+      rate: 4
+    - name: Nomad
+      icon: https://cdn.worldvectorlogo.com/logos/nomad-2.svg
+      rate: 3
+    - name: Kubernetes
+      icon: https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/1200px-Kubernetes_logo_without_workmark.svg.png
+      rate: 3

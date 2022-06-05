@@ -22,7 +22,8 @@
     "vite": "^2.9.9",
     "vite-plugin-solid": "^2.2.6",
     "vite-plugin-windicss": "^1.8.4",
-    "vite-tsconfig-paths": "^3.5.0"
+    "vite-tsconfig-paths": "^3.5.0",
+    "yaml": "^2.1.1"
   },
   "dependencies": {
     "solid-app-router": "^0.3.3",
