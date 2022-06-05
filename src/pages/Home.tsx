@@ -7,7 +7,6 @@ import { ButtonLink } from "~/components/shared";
 const { site, links } = config;
 
 export const Home: Component = () => {
-  console.log(config);
   return (
     <div class="grid grid-cols-1 items-center text-center text-gray-200">
       <img
