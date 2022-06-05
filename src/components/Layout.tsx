@@ -17,7 +17,7 @@ export const Layout: Component<ChildrenProps> = (props) => {
       <Meta name="description" content={site.description} />
 
       <Navbar />
-      <Container class="pt30 min-h-85vh">{props.children}</Container>
+      <Container class="pt-24 min-h-80vh">{props.children}</Container>
       <Footer />
     </div>
   );

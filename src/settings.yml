@@ -4,13 +4,10 @@ site:
   title: "Marco Antônio"
   description: "Code craftsman for an scalable world."
   cta:
-    primary: { text: "Contact me", link: "/contact" }
+    primary:
+      text: "Contact me"
+      link: "mailto:marco@tremtec.com?subject=Hi Marco?body=Hey, let's have a coffee?"
     secondary: { text: "Resume", link: "/resume" }
-
-home:
-  description: >-
-    Sr. Software Developer, contractor, and consultant. Owner of [TremTec](https://tremtec.com) Accelerator and organizer of [PodCodar](https://podcodar.com) Code School.
-  email_link: mailto:marco@tremtec.com?subject=Hi Marco?body=Hey, let's have a coffee?
 
 resume_url: https://drive.google.com/file/d/1tezazXzVS0P3i3_1lrJ8yg2UOGJfhVWP/view?usp=sharing
 

@@ -13,7 +13,7 @@ const [menuIsOpen, setMenuIsOpen] = createSignal(false);
 
 export const Navbar: Component = () => {
   return (
-    <nav class="bg-gray-900 absolute left-0 right-0 top-0 z-10 py4">
+    <nav class="bg-gray-900 fixed left-0 right-0 top-0 z-10 py4">
       {/* Desktop View */}
       <Container class="hidden sm:flex items-center justify-between">
         <div class="flex justify-between">

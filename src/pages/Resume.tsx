@@ -8,8 +8,9 @@ const { site, links } = config;
 
 export const Resume: Component = () => {
   return (
-    <div class="grid gap-1 grid-cols-1 sm:grid-cols-[1fr_2fr] text-gray-200">
-      <div class="grid gap-1">
+    <div class="grid gap-4 sm:grid-cols-[1fr_2fr] text-gray-200">
+      <div class="grid gap-4">
+        <Sidebar />
         <Sidebar />
       </div>
     </div>
