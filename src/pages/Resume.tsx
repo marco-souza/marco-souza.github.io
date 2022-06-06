@@ -6,7 +6,7 @@ import { parseBioText } from "~/shared/formatters";
 import { ButtonLink, ChildrenProps } from "~/components/shared";
 import { LinkedinIcon } from "~/components/icons";
 
-const { links, cover_letter, relevant_experiences } = config;
+const { links, cover_letter, relevant_experiences, education } = config;
 
 export const Resume: Component = () => {
   return (
@@ -17,6 +17,7 @@ export const Resume: Component = () => {
       <div>
         <CoverLetter />
         <Experiences />
+        <Education />
       </div>
     </div>
   );
@@ -100,6 +101,23 @@ const Experiences: Component = () => {
           </ButtonLink>
         </div>
       </div>
+    </CardLayout>
+  );
+};
+
+const Education: Component = () => {
+  return (
+    <CardLayout title="Education">
+      {education.map((exp) => (
+        <div class="my2 text-sm grid gap-1 mb6">
+          <h4 class="text-base fw500">{exp.institution}</h4>
+
+          <p class="fw200">
+            <span class="text-gray-500">{exp.period} - </span>
+            {exp.field_of_study}
+          </p>
+        </div>
+      ))}
     </CardLayout>
   );
 };
