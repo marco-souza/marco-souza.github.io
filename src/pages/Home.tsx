@@ -31,7 +31,7 @@ export const Home: Component = () => {
           {site.cta.primary.text}
         </ButtonLink>
         <ButtonLink
-          to={site.cta.primary.link}
+          to={site.cta.secondary.link}
           class={`text-gray-100 ${buttonAnimation} animate-delay-1s`}
         >
           {site.cta.secondary.text}
