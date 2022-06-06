@@ -40,7 +40,11 @@ const Sidebar: Component = () => {
         <h2 class="text-2xl fw600">{profile.name}</h2>
         <p innerHTML={parseBioText(profile.bio)} />
 
-        <ButtonLink class="text-pink-400 mw100 mxauto" to={config.resume_url}>
+        <ButtonLink
+          class="text-pink-400 mw100 mxauto"
+          to={config.resume_url}
+          target="blank"
+        >
           Resume
         </ButtonLink>
       </div>
