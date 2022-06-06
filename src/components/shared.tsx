@@ -10,6 +10,7 @@ export interface ContainerProps extends ChildrenProps {
 
 export interface ButtonProps extends ContainerProps {
   to?: string;
+  target?: string;
 }
 
 export const Container: Component<ContainerProps> = ({
@@ -22,6 +23,7 @@ export const Container: Component<ContainerProps> = ({
 
 export function ButtonLink({
   children,
+  target,
   to = "#",
   class: className = "",
 }: ButtonProps) {
@@ -31,7 +33,7 @@ export function ButtonLink({
     focus:outline-none focus:ring ${className}
   `;
   return (
-    <a class={composedStyle} href={to}>
+    <a class={composedStyle} href={to} target={target}>
       {children}
     </a>
   );

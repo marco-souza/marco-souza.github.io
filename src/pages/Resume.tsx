@@ -4,8 +4,9 @@ import { profile } from "virtual:github";
 import { config } from "virtual:config";
 import { parseBioText } from "~/shared/formatters";
 import { ButtonLink, ChildrenProps } from "~/components/shared";
+import { LinkedinIcon } from "~/components/icons";
 
-const { cover_letter } = config;
+const { links, cover_letter, relevant_experiences } = config;
 
 export const Resume: Component = () => {
   return (
@@ -15,6 +16,7 @@ export const Resume: Component = () => {
       </div>
       <div>
         <CoverLetter />
+        <Experiences />
       </div>
     </div>
   );
@@ -63,6 +65,41 @@ const CoverLetter: Component = () => {
           </SolidMarkdown>
         </p>
       ))}
+    </CardLayout>
+  );
+};
+
+const Experiences: Component = () => {
+  return (
+    <CardLayout title="Relevant Experiences">
+      <div class="grid gap-6 my4">
+        {relevant_experiences.map((exp) => (
+          <div class="text-md grid gap-1">
+            <h4 class="text-base fw500">{exp.job_title}</h4>
+            <p class="text-gray-300 text-sm fw100">
+              {exp.company}, {exp.dates_employed}
+            </p>
+            <p class="mt2 text-sm">{exp.description}</p>
+            <div>
+              {exp.tech_stack.map((tech) => (
+                <span class="mr1 text-sm text-blue-300 hover:text-blue-200 hover:cursor-pointer">{`#${tech} `}</span>
+              ))}
+            </div>
+          </div>
+        ))}
+        <div class="text-center">
+          <ButtonLink
+            target="blank"
+            to={links.linkedin}
+            class="mxauto text-xs inline-flex items-end py1 text-blue-400 hover:underline"
+          >
+            See more experiences
+            <span class="px2">
+              <LinkedinIcon />
+            </span>
+          </ButtonLink>
+        </div>
+      </div>
     </CardLayout>
   );
 };
