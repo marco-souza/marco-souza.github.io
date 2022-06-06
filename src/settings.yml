@@ -70,14 +70,6 @@ relevant_experiences:
       Our mission is to be Earth’s most customer-centric company.
       This is what unites Amazonians across teams and geographies as we are all striving to delight our customers and make their lives easier, one innovative product, service, and idea at a time.
 
-  - company: GovPredict
-    job_title: Software Engineer
-    location: New York - remote form Brazil
-    dates_employed: May 2019 – Out 2019
-    tech_stack: [react, redux, redux-thunk, ruby-on-rails, docker, redis]
-    description: >
-      We build enterprise software for the government affairs community: the policy watchers who follow bills as they make their ways through Congress, the advocates who make their cases to Members, the grassroots organizers who fight or support them, and the committees who raise the next round of political donations.
-
   - company: Inkitt
     job_title: Tech Lead - Software Engineer
     location: Berlin - Germany
