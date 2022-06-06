@@ -22,6 +22,7 @@ jobs:
           pnpm install
           NODE_ENV=production pnpm build
           touch dist/.nojekyll
+          cp dist/index.html dist/404.html
 
       - name: Cache build 📦
         uses: actions/cache@v2
