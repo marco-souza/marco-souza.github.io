@@ -6,13 +6,14 @@ import { parseBioText } from "~/shared/formatters";
 import { ButtonLink, ChildrenProps } from "~/components/shared";
 import { LinkedinIcon } from "~/components/icons";
 
-const { links, cover_letter, relevant_experiences, education } = config;
+const { links, cover_letter, relevant_experiences, education, skills } = config;
 
 export const Resume: Component = () => {
   return (
     <div class="grid gap-4 sm:grid-cols-[1fr_2fr] text-gray-200">
       <div>
         <Sidebar />
+        <Skills />
       </div>
       <div>
         <CoverLetter />
@@ -116,6 +117,32 @@ const Education: Component = () => {
             <span class="text-gray-500">{exp.period} - </span>
             {exp.field_of_study}
           </p>
+        </div>
+      ))}
+    </CardLayout>
+  );
+};
+
+const Skills: Component = () => {
+  return (
+    <CardLayout title="Skills">
+      {Object.entries(skills).map(([key, skills]: [string, Skill[]]) => (
+        <div class="my2 text-sm grid gap-1 ">
+          <h4 class="text-base fw500">{key}</h4>
+
+          <div class="grid m4 grid-cols-6 gap-2">
+            {skills.map((skill) => (
+              <img
+                data-tooltip-target={skill.name + skill.rate}
+                src={skill.icon}
+                alt={skill.name}
+                class="w20px h20px"
+                title={`${skill.name} - ${Array(skill.rate)
+                  .fill("☆")
+                  .join("")}`}
+              />
+            ))}
+          </div>
         </div>
       ))}
     </CardLayout>
