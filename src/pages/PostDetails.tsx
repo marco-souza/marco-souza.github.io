@@ -37,7 +37,7 @@ export const Home: Component = () => {
             p: (props) => <p class="my4" {...props} />,
             img: (props) => (
               <img
-                class="object-fill w-100% shadow-md shadow-dark-100"
+                class="object-fill h100 w-100% shadow-md shadow-dark-100"
                 {...props}
               />
             ),
