@@ -6,13 +6,13 @@ import RootRouter from "~/routes";
 
 const App: Component = () => {
   return (
-    <Router>
-      <MetaProvider>
+    <MetaProvider>
+      <Router>
         <Layout>
           <RootRouter />
         </Layout>
-      </MetaProvider>
-    </Router>
+      </Router>
+    </MetaProvider>
   );
 };
 

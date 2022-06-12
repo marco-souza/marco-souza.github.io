@@ -13,7 +13,6 @@ export const Layout: Component<ChildrenProps> = (props) => {
     <div class="min-h-screen bg-gray-700">
       {/* Meta tags */}
       <Title>{site.title}</Title>
-      <Link rel="canonical" href="http://solidjs.com/" />
       <Meta name="description" content={site.description} />
 
       <Navbar />
