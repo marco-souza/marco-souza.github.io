@@ -43,9 +43,9 @@ export const Home: Component = () => {
             ),
             a: (props) => (
               <a
+                {...props}
                 target="_blank"
                 class="text-pink-300 hover:text-pink-400"
-                {...props}
               />
             ),
           }}
