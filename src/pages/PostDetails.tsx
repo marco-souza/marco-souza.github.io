@@ -35,7 +35,12 @@ export const Home: Component = () => {
         <SolidMarkdown
           components={{
             p: (props) => <p class="my4" {...props} />,
-            img: (props) => <img class="object-fill w-100%" {...props} />,
+            img: (props) => (
+              <img
+                class="object-fill w-100% shadow-md shadow-dark-100"
+                {...props}
+              />
+            ),
             a: (props) => (
               <a
                 target="_blank"
