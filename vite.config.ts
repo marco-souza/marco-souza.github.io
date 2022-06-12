@@ -6,6 +6,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 import { githubPlugin } from "./plugins/github-plugin";
 import { configPlugin } from "./plugins/yaml-config-plugin";
+import { postsPlugin } from "./plugins/posts-plugin";
 
 const times = (length: number) => Array.from({ length }).map((_, i) => i + 1);
 
@@ -31,8 +32,9 @@ const config = defineConfig({
     solidPlugin(),
     configPlugin({ relativePath: "./src/settings.yml" }),
     githubPlugin({ username: "marco-souza" }),
+    postsPlugin(),
     tsconfigPaths(),
-    ...unoCssSetup,
+    unoCssSetup,
   ],
   build: {
     target: "esnext",

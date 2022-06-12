@@ -1,3 +1,20 @@
+declare module "virtual:posts" {
+  export const posts: Post[];
+  export const getPostByName: (filename: string) => Post | undefined;
+}
+
+interface Post {
+  filename: string;
+  content: string;
+  title: string;
+  summary: string;
+  author: string;
+  author_url: string;
+  keywords: string;
+  created_at: string;
+  url: string;
+}
+
 declare module "virtual:github" {
   export const profile: GithubProfile;
 }

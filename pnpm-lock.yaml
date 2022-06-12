@@ -1,9 +1,12 @@
 lockfileVersion: 5.4
 
 specifiers:
+  "@types/node": ^17.0.42
   "@unocss/reset": ^0.34.1
+  date-fns: ^2.28.0
   husky: ^8.0.1
   lint-staged: ^12.4.2
+  markdown-yaml-metadata-parser: ^3.0.0
   prettier: ^2.6.2
   solid-app-router: ^0.3.3
   solid-js: ^1.4.3
@@ -18,13 +21,16 @@ specifiers:
   yaml: ^2.1.1
 
 dependencies:
+  markdown-yaml-metadata-parser: 3.0.0
   solid-app-router: 0.3.3_solid-js@1.4.3
   solid-js: 1.4.3
   solid-markdown: 1.2.0_solid-js@1.4.3
   solid-meta: 0.27.5_solid-js@1.4.3
 
 devDependencies:
+  "@types/node": 17.0.42
   "@unocss/reset": 0.34.1
+  date-fns: 2.28.0
   husky: 8.0.1
   lint-staged: 12.4.2
   prettier: 2.6.2
@@ -632,6 +638,13 @@ packages:
       }
     dev: false
 
+  /@types/node/17.0.42:
+    resolution:
+      {
+        integrity: sha512-Q5BPGyGKcvQgAMbsr7qEGN/kIPN6zZecYYABeTDBizOsau+2NMdSVTar9UQw21A2+JyA2KRNDYaYrPB0Rpk2oQ==,
+      }
+    dev: true
+
   /@types/unist/2.0.6:
     resolution:
       {
@@ -924,6 +937,15 @@ packages:
       picomatch: 2.3.1
     dev: true
 
+  /argparse/1.0.10:
+    resolution:
+      {
+        integrity: sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg==,
+      }
+    dependencies:
+      sprintf-js: 1.0.3
+    dev: false
+
   /astral-regex/2.0.0:
     resolution:
       {
@@ -1190,6 +1212,14 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
+  /date-fns/2.28.0:
+    resolution:
+      {
+        integrity: sha512-8d35hViGYx/QH0icHYCeLmsLmMUheMmTyV9Fcm6gvNwdw31yXXH+O85sOBJ+OLnLQMKZowvpKb6FgMIQjcpvQw==,
+      }
+    engines: { node: ">=0.11" }
+    dev: true
+
   /debug/4.3.4:
     resolution:
       {
@@ -1250,6 +1280,14 @@ packages:
         integrity: sha512-QqkneF8LrYmwATMdnuD2MLI3GHQIcBnG6qFC2q9bSH430VTCDAVjcspPmUaKhPGtAtPAftIUFqY1obQYQuwmbg==,
       }
     dev: true
+
+  /detect-newline/3.1.0:
+    resolution:
+      {
+        integrity: sha512-TLz+x/vEXm/Y7P7wn1EJFNLxYpUD4TgMosxY6fAVJUnJMbupHBOncxyWUG9OpTaH9EBD7uFI5LfEgmMOc54DsA==,
+      }
+    engines: { node: ">=8" }
+    dev: false
 
   /diff/5.1.0:
     resolution:
@@ -1589,6 +1627,15 @@ packages:
     engines: { node: ">=12" }
     dev: false
 
+  /esprima/4.0.1:
+    resolution:
+      {
+        integrity: sha512-eGuFFw7Upda+g4p+QHvnW0RyTX/SVeJBDM/gCtMARO0cLuT2HcEKnTPvhjV6aGeqrCB/sbNop0Kszm0jsaWU4A==,
+      }
+    engines: { node: ">=4" }
+    hasBin: true
+    dev: false
+
   /estree-walker/2.0.2:
     resolution:
       {
@@ -1907,6 +1954,17 @@ packages:
       }
     dev: true
 
+  /js-yaml/3.14.1:
+    resolution:
+      {
+        integrity: sha512-okMH7OXXJ7YrN9Ok3/SXrnu4iX9yOk+25nqX4imS2npuvTYDmo/QEZoqwZkYaIDk3jVvBOTOIEgEhaLOynBS9g==,
+      }
+    hasBin: true
+    dependencies:
+      argparse: 1.0.10
+      esprima: 4.0.1
+    dev: false
+
   /jsesc/2.5.2:
     resolution:
       {
@@ -2049,6 +2107,17 @@ packages:
       {
         integrity: sha512-y8j3a5/DkJCmS5x4dMCQL+OR0+2EAq3DOtio1COSHsmW2BGXnNCK3v12hJt1LrUz5iZH5g0LmuYOjDdI+czghA==,
       }
+    dev: false
+
+  /markdown-yaml-metadata-parser/3.0.0:
+    resolution:
+      {
+        integrity: sha512-gRxEfuGIpb9pS1nQyASx3+l99e1hyTaK/+zDuvGcZJvr+OlksZ5O+q7opPcQP25j/z7NoOYEp17Lxgq5Sn4vDg==,
+      }
+    engines: { node: ">=10.0.0" }
+    dependencies:
+      detect-newline: 3.1.0
+      js-yaml: 3.14.1
     dev: false
 
   /mdast-util-definitions/5.1.0:
@@ -3142,6 +3211,13 @@ packages:
     resolution:
       {
         integrity: sha512-ekwEbFp5aqSPKaqeY1PGrlGQxPNaq+Cnx4+bE2D8sciBQrHpbwoBbawqTN2+6jPs9IdWxxiUcN0K2pkczD3zmw==,
+      }
+    dev: false
+
+  /sprintf-js/1.0.3:
+    resolution:
+      {
+        integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==,
       }
     dev: false
 
