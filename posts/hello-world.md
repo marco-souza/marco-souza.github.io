@@ -12,4 +12,4 @@ author_url: https://marco.tremtec.com
 
 Hi there 👋, this is the first post of my static blog made with SolidJS, TailwindCSS and Github Actions
 
-You can check the code [here](https://github.com/marco-souza/marco-souza.github.io).
+You can check the code [here](https://github.dev/marco-souza/marco-souza.github.io).
