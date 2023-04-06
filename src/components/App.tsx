@@ -1,4 +1,4 @@
-import { Router } from "solid-app-router";
+import { Router } from "@solidjs/router";
 import type { Component } from "solid-js";
 import { MetaProvider } from "solid-meta";
 import { Layout } from "~/components/Layout";

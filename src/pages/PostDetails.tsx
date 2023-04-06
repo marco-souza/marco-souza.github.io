@@ -1,4 +1,4 @@
-import { useParams } from "solid-app-router";
+import { useParams } from "@solidjs/router";
 import type { Component } from "solid-js";
 import { getPostByName } from "virtual:posts";
 import SolidMarkdown from "solid-markdown";

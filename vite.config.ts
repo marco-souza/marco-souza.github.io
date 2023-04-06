@@ -38,7 +38,6 @@ const config = defineConfig({
   ],
   build: {
     target: "esnext",
-    polyfillDynamicImport: false,
   },
 });
 
