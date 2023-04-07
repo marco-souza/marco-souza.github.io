@@ -4,6 +4,7 @@ import { getPostByName } from "virtual:posts";
 import { formatDistance } from "date-fns";
 import NotFound from "~/components/NotFound";
 import Markdown from "~/components/Markdown";
+import { A } from "solid-start";
 
 export const Home: Component = () => {
   const params = useParams();
@@ -25,13 +26,13 @@ export const Home: Component = () => {
           <p class="font-extralight text-xs pt-4">
             {formatDistance(Date.parse(post.created_at), Date.now())}
           </p>
-          <a
+          <A
             class="font-extralight text-sm  hover:underline"
             target="_blank"
             href={post.author_url}
           >
             {post.author}
-          </a>
+          </A>
         </div>
         <Markdown text={post.content} />
       </>
@@ -39,10 +40,10 @@ export const Home: Component = () => {
 
   return (
     <div class="grid grid-cols-1 text-left items-center text-gray-200">
-      <a
+      <A
         class="hover:underline text-gray-400 text-sm mt-8"
         href="/blog"
-      >{`< back`}</a>
+      >{`< back`}</A>
       {content}
     </div>
   );
