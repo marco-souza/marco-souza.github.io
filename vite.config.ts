@@ -13,7 +13,6 @@ export default defineConfig({
     githubPlugin({ username: "marco-souza" }),
     postsPlugin(),
     solid({
-      ssr: false,
       adapter: solidStartStatic(),
       extensions: [".mdx", ".md"],
     }),
