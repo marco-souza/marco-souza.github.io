@@ -1,6 +1,7 @@
 name: GH Pages Deploy
 on:
-  pull_request: {}
+  pull_request:
+    type: [opened, reopened, synchronize]
   push:
     branches:
       - main
@@ -22,8 +23,8 @@ jobs:
           npm install -g pnpm
           pnpm install
           NODE_ENV=production pnpm build
-          touch dist/.nojekyll
-          cp dist/index.html dist/404.html
+          touch dist/public/.nojekyll
+          cp dist/public/index.html dist/public/404.html
 
       - name: Cache build 📦
         uses: actions/cache@v2
@@ -36,6 +37,6 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: dist
+          FOLDER: dist/public
         env:
           ACTIONS_ALLOW_UNSECURE_COMMANDS: "true"
