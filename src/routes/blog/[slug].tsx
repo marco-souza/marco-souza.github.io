@@ -1,9 +1,9 @@
 import { useParams } from "@solidjs/router";
 import type { Component } from "solid-js";
 import { getPostByName } from "virtual:posts";
-import SolidMarkdown from "solid-markdown";
 import { formatDistance } from "date-fns";
 import NotFound from "~/components/NotFound";
+import Markdown from "~/components/Markdown";
 
 export const Home: Component = () => {
   const params = useParams();
@@ -13,18 +13,9 @@ export const Home: Component = () => {
     post == null ? (
       <>
         <NotFound>
-          <SolidMarkdown
-            components={{
-              code: (props) => (
-                <code
-                  class="text-sm bg-gray-900 p-0.5 px-1 rounded-md"
-                  {...props}
-                />
-              ),
-            }}
-          >
-            {`The post \`/blog/${params.slug}\` does not exists`}
-          </SolidMarkdown>
+          <Markdown
+            text={`The post \`/blog/${params.slug}\` does not exists`}
+          />
         </NotFound>
       </>
     ) : (
@@ -42,26 +33,7 @@ export const Home: Component = () => {
             {post.author}
           </a>
         </div>
-        <SolidMarkdown
-          components={{
-            p: (props) => <p class="my-4" {...props} />,
-            img: (props) => (
-              <img
-                class="object-fill h-100 w-100% shadow-md shadow-dark-100"
-                {...props}
-              />
-            ),
-            a: (props) => (
-              <a
-                {...props}
-                target="_blank"
-                class="text-pink-300 hover:text-pink-400"
-              />
-            ),
-          }}
-        >
-          {post.content}
-        </SolidMarkdown>
+        <Markdown text={post.content} />
       </>
     );
 
