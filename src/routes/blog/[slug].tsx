@@ -3,29 +3,39 @@ import type { Component } from "solid-js";
 import { getPostByName } from "virtual:posts";
 import SolidMarkdown from "solid-markdown";
 import { formatDistance } from "date-fns";
+import NotFound from "~/components/NotFound";
 
 export const Home: Component = () => {
   const params = useParams();
-  const filename = params.filename;
-  const post = getPostByName(filename);
+  const post = getPostByName(params.slug);
 
   const content =
     post == null ? (
       <>
-        <h1 class="text-center text-2xl py8">Oops, nothing here</h1>
-        <p class="text-center text-md fw200">
-          The post "{filename}" does not exists
-        </p>
+        <NotFound>
+          <SolidMarkdown
+            components={{
+              code: (props) => (
+                <code
+                  class="text-sm bg-gray-900 p-0.5 px-1 rounded-md"
+                  {...props}
+                />
+              ),
+            }}
+          >
+            {`The post \`/blog/${params.slug}\` does not exists`}
+          </SolidMarkdown>
+        </NotFound>
       </>
     ) : (
       <>
-        <div class="py8">
-          <h1 class="text-3xl fw600">{post.title}</h1>
-          <p class="fw200 text-xs pt-4">
+        <div class="py-8">
+          <h1 class="text-3xl font-semibold">{post.title}</h1>
+          <p class="font-extralight text-xs pt-4">
             {formatDistance(Date.parse(post.created_at), Date.now())}
           </p>
           <a
-            class="fw200 text-sm  hover:underline"
+            class="font-extralight text-sm  hover:underline"
             target="_blank"
             href={post.author_url}
           >
@@ -34,10 +44,10 @@ export const Home: Component = () => {
         </div>
         <SolidMarkdown
           components={{
-            p: (props) => <p class="my4" {...props} />,
+            p: (props) => <p class="my-4" {...props} />,
             img: (props) => (
               <img
-                class="object-fill h100 w-100% shadow-md shadow-dark-100"
+                class="object-fill h-100 w-100% shadow-md shadow-dark-100"
                 {...props}
               />
             ),
@@ -56,9 +66,9 @@ export const Home: Component = () => {
     );
 
   return (
-    <div class="grid grid-cols-1 text-left items-center text-center text-gray-200">
+    <div class="grid grid-cols-1 text-left items-center text-gray-200">
       <a
-        class="hover:underline text-gray-400 text-sm mt8"
+        class="hover:underline text-gray-400 text-sm mt-8"
         href="/blog"
       >{`< back`}</a>
       {content}
