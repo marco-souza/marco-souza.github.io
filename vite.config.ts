@@ -12,6 +12,10 @@ export default defineConfig({
     settingsPlugin({ relativePath: "./src/settings.yml" }),
     githubPlugin({ username: "marco-souza" }),
     postsPlugin(),
-    solid({ adapter: solidStartStatic() }),
+    solid({
+      ssr: false,
+      adapter: solidStartStatic(),
+      extensions: [".mdx", ".md"],
+    }),
   ],
 });

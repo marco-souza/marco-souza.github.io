@@ -1,9 +1,7 @@
-import { Component, JSX } from "solid-js";
+import { Component, ParentProps } from "solid-js";
 import { A } from "solid-start";
 
-export interface ChildrenProps {
-  children: JSX.Element;
-}
+export type ChildrenProps = ParentProps;
 
 export interface ContainerProps extends ChildrenProps {
   class?: string;

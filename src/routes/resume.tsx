@@ -26,22 +26,22 @@ export const Resume: Component = () => {
 
 const Sidebar: Component = () => {
   return (
-    <div class="shadown mb4 grid gap-1 bg-gray-900 inline-grid h-[inherit] gap-1 text-center border-bottom border-b-10 border-pink-500">
+    <div class="shadown mb-4 grid gap-1 bg-gray-900 h-[inherit] text-center border-bottom border-b-10 border-pink-500">
       <div class="text-gray-900 relative h-[16rem]">
         <div class="bg-blue-400 h-[60%] p-2"></div>
         <img
-          class="h-[180px] w-[180px] rounded-full mt-[-100px] border-gray-900 mxauto"
+          class="h-[180px] w-[180px] rounded-full mt-[-100px] border-gray-900 mx-auto"
           alt="Profile logo"
           src={profile.avatar_url}
         />
       </div>
 
-      <div class="info grid gap-4 p4">
+      <div class="info grid gap-4 p-6 pt-0">
         <h2 class="text-2xl fw600">{profile.name}</h2>
         <p innerHTML={parseBioText(profile.bio)} />
 
         <ButtonLink
-          class="text-pink-400 mw100 mxauto"
+          class="text-pink-400 w-full mx-auto"
           to={config.resume_url}
           target="blank"
         >
@@ -131,10 +131,9 @@ const Skills: Component = () => {
   return (
     <CardLayout title="Skills">
       {Object.entries(skills).map(([key, skills]: [string, Skill[]]) => (
-        <div class="my2 text-sm grid gap-1 ">
-          <h4 class="text-base fw500">{key}</h4>
-
-          <div class="grid m4 grid-cols-6 gap-2">
+        <div class="my-2 text-sm grid gap-1">
+          <h4 class="text-base font-medium">{key}</h4>
+          <div class="grid m-2 grid-cols-6 gap-2">
             {skills.map((skill) => (
               <img
                 data-tooltip-target={skill.name + skill.rate}
@@ -161,9 +160,9 @@ interface CardLayoutProps extends ChildrenProps {
 const CardLayout: Component<CardLayoutProps> = (props) => {
   return (
     <div
-      class={`mb4 px4 py2 bg-gray-800 border-bottom border-b-10 border-blue-300 ${props.class}`}
+      class={`mb-4 p-4 bg-gray-800 border-bottom border-b-10 border-blue-300 ${props.class}`}
     >
-      <h3 class="text-lg fw600 py2">{props.title}</h3>
+      <h3 class="text-lg font-semibold py-2">{props.title}</h3>
 
       <div>{props.children}</div>
     </div>
