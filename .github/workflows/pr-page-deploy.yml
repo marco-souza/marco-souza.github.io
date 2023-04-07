@@ -1,8 +1,8 @@
 name: GH Pages Deploy
 on:
-  push:
-    branches:
-      - main
+  pull_request:
+    type: [opened, reopened, synchronize]
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -30,11 +30,3 @@ jobs:
           path: ${{ github.workspace }}/node_modules
           key: ${{ runner.os }}-solid-start-${{ hashFiles('**/pnpm-lock.yaml') }}
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@3.5.7
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: dist/public
-        env:
-          ACTIONS_ALLOW_UNSECURE_COMMANDS: "true"
