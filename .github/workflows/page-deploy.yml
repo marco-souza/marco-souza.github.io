@@ -1,5 +1,6 @@
 name: GH Pages Deploy
 on:
+  pull_request: {}
   push:
     branches:
       - main
@@ -27,8 +28,8 @@ jobs:
       - name: Cache build 📦
         uses: actions/cache@v2
         with:
-          path: ${{ github.workspace }}/.next/cache
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}
+          path: ${{ github.workspace }}/node_module
+          key: ${{ runner.os }}-solid-start-${{ hashFiles('**/pnpm-lock.yaml') }}
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.5.7
