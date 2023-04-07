@@ -28,13 +28,13 @@ export const Home: Component = () => {
       <div class="grid gap-8 grid-cols-1 sm:mx-20 sm:grid-cols-2">
         <ButtonLink
           to={site.cta.primary.link}
-          class={`text-pink-400 ${buttonAnimation}`}
+          class="text-pink-400 animate-bounce repeat-[2]"
         >
           {site.cta.primary.text}
         </ButtonLink>
         <ButtonLink
           to={site.cta.secondary.link}
-          class={`text-gray-100 ${buttonAnimation} animate-delay-1s`}
+          class="text-gray-100 animate-bounce repeat-[2] delay-200"
         >
           {site.cta.secondary.text}
         </ButtonLink>
@@ -44,6 +44,3 @@ export const Home: Component = () => {
 };
 
 export default Home;
-
-// FIXME: animation is not working yet
-const buttonAnimation = "animate-bounce-alt animate-count-1 animate-1s";

@@ -22,7 +22,7 @@ export default function Root() {
     <Html lang="en">
       <Head>
         {/* Meta tags */}
-        <Title> {site.title}</Title>
+        <Title>{site.title}</Title>
         <Meta name="description" content={site.description} />
 
         <Meta charset="utf-8" />
