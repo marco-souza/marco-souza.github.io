@@ -1,4 +1,4 @@
-name: GH Pages Deploy
+name: PR Check
 on:
   pull_request:
     type: [opened, reopened, synchronize]
