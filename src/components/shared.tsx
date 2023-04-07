@@ -1,8 +1,7 @@
-import { Component, JSX } from "solid-js";
+import { Component, ParentProps } from "solid-js";
+import { A } from "solid-start";
 
-export interface ChildrenProps {
-  children: JSX.Element;
-}
+export type ChildrenProps = ParentProps;
 
 export interface ContainerProps extends ChildrenProps {
   class?: string;
@@ -33,8 +32,8 @@ export function ButtonLink({
     focus:outline-none focus:ring ${className}
   `;
   return (
-    <a class={composedStyle} href={to} target={target}>
+    <A class={composedStyle} href={to} target={target}>
       {children}
-    </a>
+    </A>
   );
 }

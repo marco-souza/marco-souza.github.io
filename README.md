@@ -7,6 +7,7 @@ Welcome to my personal site!
 It was built with `solidjs`, `unocss`, `vitejs`, and custom plugins to read filesystem data data in compile time.
 
 Other features
+
 - auto deploy with Github Actions
 - uses Github Pages + custom URL (https://marco.tremtec.com)
 - uses `pnpm`

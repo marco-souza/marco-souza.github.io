@@ -1,4 +1,5 @@
 import { Component, createSignal } from "solid-js";
+import { A } from "solid-start";
 import { config } from "virtual:config";
 import {
   GithubIcon,
@@ -13,7 +14,7 @@ const [menuIsOpen, setMenuIsOpen] = createSignal(false);
 
 export const Navbar: Component = () => {
   return (
-    <nav class="bg-gray-900 shadow-md fixed left-0 right-0 top-0 z-10 py4">
+    <nav class="bg-gray-900 shadow-md fixed left-0 right-0 top-0 z-10 py-4">
       {/* Desktop View */}
       <Container class="hidden sm:flex items-center justify-between">
         <div class="flex justify-between">
@@ -32,7 +33,7 @@ export const Navbar: Component = () => {
         <Logo />
       </Container>
       <Container class="sm:hidden text-center">
-        <div class={`py4 ${menuIsOpen() ? "inline-grid" : "hidden"} gap-8`}>
+        <div class={`py-4 ${menuIsOpen() ? "inline-grid" : "hidden"} gap-8`}>
           <NavLinks />
           <SocialLinks />
         </div>
@@ -63,14 +64,12 @@ const navigationLinks = [
 
 const NavLinks: Component = () => {
   return (
-    <ul
-      class={`grid gap-4 grid-cols-${navigationLinks.length} items-center font-light text-gray-300`}
-    >
+    <ul class="flex gap-4 font-light text-gray-300 items-center">
       {navigationLinks.map((item) => (
         <li>
-          <a class="rounded-lg p-2 py-1 hover:bg-gray-700" href={item.link}>
+          <A class="rounded-lg p-2 py-1 hover:bg-gray-700" href={item.link}>
             {item.title}
-          </a>
+          </A>
         </li>
       ))}
     </ul>
@@ -84,16 +83,16 @@ const socialLinks = [
 ];
 
 const SocialLinks: Component = () => (
-  <ul class={`grid gap-4 grid-cols-${socialLinks.length} text-gray-400`}>
+  <ul class="flex gap-4 text-gray-400 justify-center">
     {socialLinks.map((item) => (
       <li>
-        <a
+        <A
           class="rounded-lg hover:text-gray-200"
           target="_blank"
           href={item.link}
         >
           <item.component />
-        </a>
+        </A>
       </li>
     ))}
   </ul>
