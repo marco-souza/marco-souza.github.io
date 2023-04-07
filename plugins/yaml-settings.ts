@@ -9,7 +9,7 @@ interface PluginConfig {
 
 type PluginOptions = PluginConfig | undefined;
 
-export function configPlugin(config: PluginOptions = {}): Plugin {
+export function settingsPlugin(config: PluginOptions = {}): Plugin {
   const virtualModuleId = "virtual:config";
   const resolvedVirtualModuleId = "\0" + virtualModuleId;
 
@@ -21,7 +21,7 @@ export function configPlugin(config: PluginOptions = {}): Plugin {
     },
     async load(id) {
       if (id === resolvedVirtualModuleId) {
-        const { relativePath = "config.yml" } = config;
+        const { relativePath = "settings.yml" } = config;
         const projectBasePath = `${__dirname}/../`;
         const absolutePath = path.resolve(projectBasePath, relativePath);
         const configFile = fs.readFileSync(absolutePath, "utf8");

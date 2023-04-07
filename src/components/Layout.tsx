@@ -1,5 +1,5 @@
 import { Component } from "solid-js";
-import { Link, Meta, Title } from "solid-meta";
+import { Meta, Title } from "solid-start";
 import { config } from "virtual:config";
 
 import { Footer } from "./Footer";
