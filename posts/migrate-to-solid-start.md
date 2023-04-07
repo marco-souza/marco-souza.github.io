@@ -33,3 +33,7 @@ I recently migrated my web application from SolidJS to Solid-Start, a starter ki
 Overall, the migration to Solid-Start was a smooth process, and I'm pleased with the result. If you're looking to build a SolidJS application, I'd definitely recommend checking it out!
 
 You can check the Pull Request [here](https://github.com/marco-souza/marco-souza.github.io/pull/20).
+
+## Reference
+
+- <https://dev.to/lexlohr/using-solid-start-with-github-pages-3iok>
