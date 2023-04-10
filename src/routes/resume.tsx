@@ -97,10 +97,10 @@ const Experiences: Component = () => {
           <ButtonLink
             target="blank"
             to={links.linkedin}
-            class="mx-auto text-xs inline-flex items-end py-1 text-blue-400 hover:underline"
+            class="mx-auto gap-2 text-xs inline-flex items-end py-1 text-blue-400 hover:underline"
           >
-            See more experiences
-            <span class="px2">
+            <span>See more experiences</span>
+            <span>
               <LinkedinIcon />
             </span>
           </ButtonLink>
