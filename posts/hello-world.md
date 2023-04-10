@@ -4,6 +4,7 @@ summary: Hi there 👋, this is the first post of my static blog made with Solid
 author: Marco Antonio
 email: marco@tremtec.com
 author_url: https://marco.tremtec.com
+created_at: 06-10-2022
 ---
 
 # Hello world!

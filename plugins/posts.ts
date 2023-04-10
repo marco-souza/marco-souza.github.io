@@ -38,7 +38,7 @@ export function postsPlugin({
 }
 
 interface ParsedData {
-  metadata: Omit<Post, "content" | "created_at">;
+  metadata: Omit<Post, "content">;
   content: string;
 }
 
@@ -48,19 +48,23 @@ async function loadPosts(filesList: string[], postsPath: string) {
   if (Object.entries(postsStore).length > 0) return postsStore;
 
   const loadedPosts = await Promise.all(
-    filesList.map(async (filename) => {
-      const filepath = path.join(postsPath, filename);
+    filesList.map(async (filenameWithExt) => {
+      const filepath = path.join(postsPath, filenameWithExt);
       const file = await fs.readFile(filepath);
-      const { birthtime } = await fs.stat(filepath);
-      const { content, metadata }: ParsedData = metadataParser(file.toString());
 
-      return <Post>{
+      const { content, metadata }: ParsedData = metadataParser(file.toString());
+      const created_at = new Date(metadata.created_at).toISOString();
+      const filename = filenameWithExt.slice(0, -3);
+      const url = `/blog/${filename}`;
+
+      const post = <Post>{
         ...metadata,
-        content: content,
-        filename: filename.slice(0, -3),
-        url: `/blog/${filename.slice(0, -3)}`,
-        created_at: birthtime.toISOString(),
+        content,
+        created_at,
+        filename,
+        url,
       };
+      return post;
     })
   );
 

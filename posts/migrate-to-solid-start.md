@@ -4,6 +4,7 @@ summary: Hi there 👋, this is the second post of my blog made with SolidJS, Ta
 author: Marco Antonio
 email: marco@tremtec.com
 author_url: https://marco.tremtec.com
+created_at: 04-10-2023
 ---
 
 ![And here we are again](https://images.unsplash.com/photo-1508138221679-760a23a2285b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80)
