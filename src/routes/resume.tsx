@@ -97,7 +97,7 @@ const Experiences: Component = () => {
           <ButtonLink
             target="blank"
             to={links.linkedin}
-            class="mxauto text-xs inline-flex items-end py1 text-blue-400 hover:underline"
+            class="mx-auto text-xs inline-flex items-end py-1 text-blue-400 hover:underline"
           >
             See more experiences
             <span class="px2">
@@ -114,7 +114,7 @@ const Education: Component = () => {
   return (
     <CardLayout title="Education">
       {education.map((exp) => (
-        <div class="my2 text-sm grid gap-1 mb6">
+        <div class="my-2 text-sm grid gap-1 mb-6">
           <h4 class="text-base fw500">{exp.institution}</h4>
 
           <p class="fw200">
@@ -139,7 +139,7 @@ const Skills: Component = () => {
                 data-tooltip-target={skill.name + skill.rate}
                 src={skill.icon}
                 alt={skill.name}
-                class="w20px h20px"
+                class="w-[20px] h-[20px]"
                 title={`${skill.name} - ${Array(skill.rate)
                   .fill("☆")
                   .join("")}`}
