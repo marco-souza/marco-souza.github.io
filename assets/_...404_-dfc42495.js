@@ -1,0 +1,1 @@
+import{c as t,a as e,T as o,B as r,b as n}from"./index-16e2d4b5.js";import{N as a}from"./NotFound-ec3ef06e.js";const{site:i}=n,d=()=>[t(o,{get children(){return[e(()=>i.title)," - Not found"]}}),t(a,{get children(){return t(r,{to:"/",class:"border-pink-500 text-pink-500",children:"Go Home"})}})];export{d as Page404,d as default};

@@ -1,0 +1,99 @@
+{
+  ".solid/index.css": {
+    "file": "assets/index-f88ebfd7.css",
+    "src": ".solid/index.css"
+  },
+  ".solid/index.html": {
+    "css": [
+      "assets/index-f88ebfd7.css"
+    ],
+    "dynamicImports": [
+      "src/routes/[...404].tsx",
+      "src/routes/about.tsx",
+      "src/routes/index.tsx",
+      "src/routes/resume.tsx",
+      "src/routes/blog/[slug].tsx",
+      "src/routes/blog/index.tsx"
+    ],
+    "file": "assets/index-16e2d4b5.js",
+    "isEntry": true,
+    "src": ".solid/index.html"
+  },
+  "_NotFound-ec3ef06e.js": {
+    "file": "assets/NotFound-ec3ef06e.js",
+    "imports": [
+      ".solid/index.html"
+    ]
+  },
+  "_formatters-f9157af3.js": {
+    "file": "assets/formatters-f9157af3.js",
+    "imports": [
+      ".solid/index.html"
+    ]
+  },
+  "_index-9ea804a3.js": {
+    "file": "assets/index-9ea804a3.js"
+  },
+  "_index.browser-1f7f232c.js": {
+    "file": "assets/index.browser-1f7f232c.js",
+    "imports": [
+      ".solid/index.html"
+    ]
+  },
+  "src/routes/[...404].tsx": {
+    "file": "assets/_...404_-dfc42495.js",
+    "imports": [
+      ".solid/index.html",
+      "_NotFound-ec3ef06e.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/routes/[...404].tsx"
+  },
+  "src/routes/about.tsx": {
+    "file": "assets/about-c6fac25d.js",
+    "imports": [
+      ".solid/index.html"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/routes/about.tsx"
+  },
+  "src/routes/blog/[slug].tsx": {
+    "file": "assets/_slug_-1b62d3a1.js",
+    "imports": [
+      ".solid/index.html",
+      "_index-9ea804a3.js",
+      "_NotFound-ec3ef06e.js",
+      "_index.browser-1f7f232c.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/routes/blog/[slug].tsx"
+  },
+  "src/routes/blog/index.tsx": {
+    "file": "assets/index-50b0a7c5.js",
+    "imports": [
+      ".solid/index.html",
+      "_index-9ea804a3.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/routes/blog/index.tsx"
+  },
+  "src/routes/index.tsx": {
+    "file": "assets/index-27d9abb3.js",
+    "imports": [
+      ".solid/index.html",
+      "_formatters-f9157af3.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/routes/index.tsx"
+  },
+  "src/routes/resume.tsx": {
+    "file": "assets/resume-066842a7.js",
+    "imports": [
+      ".solid/index.html",
+      "_index.browser-1f7f232c.js",
+      "_formatters-f9157af3.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/routes/resume.tsx"
+  }
+}
