@@ -1,5 +1,4 @@
 import solid from "solid-start/vite";
-import solidStartStatic from "solid-start-static";
 import { defineConfig } from "vite";
 
 import { settingsPlugin } from "./plugins/yaml-settings";
@@ -13,7 +12,7 @@ export default defineConfig({
     githubPlugin({ username: "marco-souza" }),
     postsPlugin(),
     solid({
-      adapter: solidStartStatic(),
+      ssr: false,
       extensions: [".mdx", ".md"],
     }),
   ],
