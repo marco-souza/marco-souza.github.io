@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Remove margin when printing page */
+@media print {
+  @page {
+    margin: 0;
+    padding: 2rem;
+  }
+}
