@@ -2,7 +2,7 @@
   "\u0000virtual:config": [
   ],
   "\u0000virtual:github": [
-    "/assets/formatters-a4bb14fc.js"
+    "/assets/formatters-68f3ea7f.js"
   ],
   "\u0000virtual:posts": [
     "/assets/index-515a34ca.js"
@@ -108,7 +108,7 @@
   "node_modules/.pnpm/solid-js@1.7.2/node_modules/solid-js/web/dist/web.js": [
   ],
   "node_modules/.pnpm/solid-markdown@1.2.1_solid-js@1.7.2/node_modules/solid-markdown/dist/index.browser.jsx": [
-    "/assets/index.browser-369fa4b1.js"
+    "/assets/index.browser-216e4320.js"
   ],
   "node_modules/.pnpm/solid-start@0.2.26_@solidjs+meta@0.28.4_@solidjs+router@0.8.2_solid-js@1.7.2_solid-start-node@0.2.26_vite@4.2.1/node_modules/solid-start/entry-client/StartClient.tsx": [
   ],
@@ -128,9 +128,6 @@
   ],
   "node_modules/.pnpm/solid-start@0.2.26_@solidjs+meta@0.28.4_@solidjs+router@0.8.2_solid-js@1.7.2_solid-start-node@0.2.26_vite@4.2.1/node_modules/solid-start/server/types.tsx": [
   ],
-  "src/components/Counter.tsx": [
-    "/assets/about-3260948b.js"
-  ],
   "src/components/Footer.tsx": [
   ],
   "src/components/Layout.tsx": [
@@ -138,12 +135,12 @@
   "src/components/Logo.tsx": [
   ],
   "src/components/Markdown.tsx": [
-    "/assets/_slug_-4e7ad50c.js"
+    "/assets/_slug_-32d4c824.js"
   ],
   "src/components/Navbar.tsx": [
   ],
   "src/components/NotFound.tsx": [
-    "/assets/NotFound-07a4c831.js"
+    "/assets/NotFound-139b27d1.js"
   ],
   "src/components/icons.tsx": [
   ],
@@ -156,24 +153,21 @@
   "src/root.tsx": [
   ],
   "src/routes/[...404].tsx": [
-    "/assets/_...404_-004972a4.js"
-  ],
-  "src/routes/about.tsx": [
-    "/assets/about-3260948b.js"
+    "/assets/_...404_-2da49adf.js"
   ],
   "src/routes/blog/[slug].tsx": [
-    "/assets/_slug_-4e7ad50c.js"
+    "/assets/_slug_-32d4c824.js"
   ],
   "src/routes/blog/index.tsx": [
-    "/assets/index-bed352bb.js"
+    "/assets/index-78cd5574.js"
   ],
   "src/routes/index.tsx": [
-    "/assets/index-a64fcab9.js"
+    "/assets/index-096ff6a4.js"
   ],
   "src/routes/resume.tsx": [
-    "/assets/resume-f2fb5380.js"
+    "/assets/resume-2221213a.js"
   ],
   "src/shared/formatters.ts": [
-    "/assets/formatters-a4bb14fc.js"
+    "/assets/formatters-68f3ea7f.js"
   ]
 }

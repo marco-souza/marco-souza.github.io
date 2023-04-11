@@ -1,32 +1,31 @@
 {
   ".solid/index.css": {
-    "file": "assets/index-d50b0899.css",
+    "file": "assets/index-f427fba0.css",
     "src": ".solid/index.css"
   },
   ".solid/index.html": {
     "css": [
-      "assets/index-d50b0899.css"
+      "assets/index-f427fba0.css"
     ],
     "dynamicImports": [
       "src/routes/[...404].tsx",
-      "src/routes/about.tsx",
       "src/routes/index.tsx",
       "src/routes/resume.tsx",
       "src/routes/blog/[slug].tsx",
       "src/routes/blog/index.tsx"
     ],
-    "file": "assets/index-5bcd89c2.js",
+    "file": "assets/index-a59c4285.js",
     "isEntry": true,
     "src": ".solid/index.html"
   },
-  "_NotFound-07a4c831.js": {
-    "file": "assets/NotFound-07a4c831.js",
+  "_NotFound-139b27d1.js": {
+    "file": "assets/NotFound-139b27d1.js",
     "imports": [
       ".solid/index.html"
     ]
   },
-  "_formatters-a4bb14fc.js": {
-    "file": "assets/formatters-a4bb14fc.js",
+  "_formatters-68f3ea7f.js": {
+    "file": "assets/formatters-68f3ea7f.js",
     "imports": [
       ".solid/index.html"
     ]
@@ -34,42 +33,34 @@
   "_index-515a34ca.js": {
     "file": "assets/index-515a34ca.js"
   },
-  "_index.browser-369fa4b1.js": {
-    "file": "assets/index.browser-369fa4b1.js",
+  "_index.browser-216e4320.js": {
+    "file": "assets/index.browser-216e4320.js",
     "imports": [
       ".solid/index.html"
     ]
   },
   "src/routes/[...404].tsx": {
-    "file": "assets/_...404_-004972a4.js",
+    "file": "assets/_...404_-2da49adf.js",
     "imports": [
       ".solid/index.html",
-      "_NotFound-07a4c831.js"
+      "_NotFound-139b27d1.js"
     ],
     "isDynamicEntry": true,
     "src": "src/routes/[...404].tsx"
   },
-  "src/routes/about.tsx": {
-    "file": "assets/about-3260948b.js",
-    "imports": [
-      ".solid/index.html"
-    ],
-    "isDynamicEntry": true,
-    "src": "src/routes/about.tsx"
-  },
   "src/routes/blog/[slug].tsx": {
-    "file": "assets/_slug_-4e7ad50c.js",
+    "file": "assets/_slug_-32d4c824.js",
     "imports": [
       ".solid/index.html",
       "_index-515a34ca.js",
-      "_NotFound-07a4c831.js",
-      "_index.browser-369fa4b1.js"
+      "_NotFound-139b27d1.js",
+      "_index.browser-216e4320.js"
     ],
     "isDynamicEntry": true,
     "src": "src/routes/blog/[slug].tsx"
   },
   "src/routes/blog/index.tsx": {
-    "file": "assets/index-bed352bb.js",
+    "file": "assets/index-78cd5574.js",
     "imports": [
       ".solid/index.html",
       "_index-515a34ca.js"
@@ -78,20 +69,20 @@
     "src": "src/routes/blog/index.tsx"
   },
   "src/routes/index.tsx": {
-    "file": "assets/index-a64fcab9.js",
+    "file": "assets/index-096ff6a4.js",
     "imports": [
       ".solid/index.html",
-      "_formatters-a4bb14fc.js"
+      "_formatters-68f3ea7f.js"
     ],
     "isDynamicEntry": true,
     "src": "src/routes/index.tsx"
   },
   "src/routes/resume.tsx": {
-    "file": "assets/resume-f2fb5380.js",
+    "file": "assets/resume-2221213a.js",
     "imports": [
       ".solid/index.html",
-      "_index.browser-369fa4b1.js",
-      "_formatters-a4bb14fc.js"
+      "_index.browser-216e4320.js",
+      "_formatters-68f3ea7f.js"
     ],
     "isDynamicEntry": true,
     "src": "src/routes/resume.tsx"
