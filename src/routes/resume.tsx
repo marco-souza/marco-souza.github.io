@@ -11,7 +11,7 @@ const { links, cover_letter, relevant_experiences, education, skills } = config;
 export const Resume: Component = () => {
   return (
     <div class="grid gap-4 sm:grid-cols-[1fr_2fr] text-gray-200">
-      <div>
+      <div class="print:grid print:grid-cols-2">
         <Sidebar />
         <Skills />
       </div>
@@ -37,11 +37,11 @@ const Sidebar: Component = () => {
       </div>
 
       <div class="info grid gap-4 p-6 pt-0">
-        <h2 class="text-2xl fw600">{profile.name}</h2>
+        <h2 class="text-2xl font-semibold">{profile.name}</h2>
         <p innerHTML={parseBioText(profile.bio)} />
 
         <ButtonLink
-          class="text-pink-400 w-full mx-auto"
+          class="text-pink-400 w-full mx-auto print:hidden"
           to={config.resume_url}
           target="blank"
         >
@@ -56,7 +56,7 @@ export default Resume;
 
 const CoverLetter: Component = () => {
   return (
-    <CardLayout title="Cover Letter">
+    <CardLayout title="Cover Letter" class="print:break-after-page">
       {cover_letter.split("\n").map((text) => (
         <p class="my1 mx0 text-sm">
           <SolidMarkdown
