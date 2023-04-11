@@ -6,6 +6,9 @@ module.exports = {
       fontFamily: {
         serif: "Times New Roman",
       },
+      screens: {
+        print: { raw: "print" },
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
