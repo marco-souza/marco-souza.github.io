@@ -4,7 +4,7 @@
 
 Welcome to my personal site!
 
-It was built with `solidjs`, `tailwindcss`, `vitejs`, and custom plugins to read filesystem data data in compile time.
+It was built with `SolidStart`, `tailwindcss`, `vite + vitest`, and custom plugins to read filesystem data data in compile time.
 
 Other features
 
