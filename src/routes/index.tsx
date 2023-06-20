@@ -21,7 +21,7 @@ export const Home: Component = () => {
       </div>
 
       <div
-        class="opacity-70 font-extralight text-md text-gray-400 sm:px-20 md:px-40"
+        class="opacity-70 font-extralight text-md text-gray-300 sm:px-20 md:px-40"
         innerHTML={parseBioText(profile.bio)}
       />
 
