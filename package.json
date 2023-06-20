@@ -41,7 +41,7 @@
     "undici": "^5.22.1"
   },
   "lint-staged": {
-    "{src,posts,plugins,.github,}/**/*": "pnpm fmt"
+    "**/*.{ts,tsx,json,svg,yaml,yml,md}": "prettier -w"
   },
   "engines": {
     "node": ">=16"
