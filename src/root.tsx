@@ -29,18 +29,17 @@ export default function Root() {
         <Meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <Body>
-        <Layout>
-          <Suspense>
-            <ErrorBoundary>
-              <Routes>
-                <FileRoutes />
-              </Routes>
-            </ErrorBoundary>
-          </Suspense>
-        </Layout>
-        <Scripts />
-      </Body>
+      <Layout>
+        <Suspense>
+          <ErrorBoundary>
+            <Routes>
+              <FileRoutes />
+            </Routes>
+          </ErrorBoundary>
+        </Suspense>
+      </Layout>
+
+      <Scripts />
     </Html>
   );
 }
