@@ -9,19 +9,25 @@ const asyncDynamicRoutes = [
 ];
 
 export async function sitemapGenerator(): Promise<Plugin> {
+  const sitemapConfig = await makeSitemapConfig();
+  return sitemap(sitemapConfig);
+}
+
+export async function makeSitemapConfig() {
   const outDir = "./public/";
   const hostname = await loadHomepage();
-  const dynamicRoutes = await Promise.all(asyncDynamicRoutes).then((routes) =>
-    routes.flat()
-  );
+  const dynamicRoutes = await loadDynamicRoutes();
 
-  const plugin: Plugin = sitemap({
+  return {
     outDir,
     hostname,
     dynamicRoutes,
-  });
+  };
+}
 
-  return plugin;
+async function loadDynamicRoutes() {
+  const routes = await Promise.all(asyncDynamicRoutes);
+  return routes.flat();
 }
 
 async function loadHomepage(): Promise<string> {
