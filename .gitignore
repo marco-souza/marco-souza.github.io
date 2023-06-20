@@ -9,6 +9,10 @@ netlify
 # dependencies
 /node_modules
 
+# auto generated assets
+public/sitemap.xml
+public/robots.txt
+
 # IDEs and editors
 /.idea
 .project
