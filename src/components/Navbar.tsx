@@ -45,6 +45,7 @@ export const Navbar: Component = () => {
 const MenuButton: Component = () => {
   return (
     <button
+      title="menu"
       class="sm:hidden absolute left-0 mx-4 px-4 text-white"
       onClick={() => setMenuIsOpen((val) => !val)}
     >
