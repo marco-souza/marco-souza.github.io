@@ -14,28 +14,29 @@
   "license": "MIT",
   "type": "module",
   "devDependencies": {
-    "@types/node": "^18.15.11",
+    "@types/node": "^18.16.18",
     "autoprefixer": "^10.4.14",
-    "date-fns": "^2.29.3",
+    "date-fns": "^2.30.0",
     "husky": "^8.0.3",
     "lint-staged": "^12.5.0",
-    "postcss": "^8.4.21",
-    "prettier": "^2.8.7",
+    "postcss": "^8.4.24",
+    "prettier": "^2.8.8",
     "solid-start-node": "^0.2.26",
-    "tailwindcss": "^3.3.1",
-    "tailwindcss-animate": "^1.0.5",
+    "tailwindcss": "^3.3.2",
+    "tailwindcss-animate": "^1.0.6",
     "typescript": "^4.9.5",
-    "vite": "^4.2.1",
-    "yaml": "^2.2.1"
+    "vite": "^4.3.9",
+    "vite-plugin-sitemap": "^0.4.2",
+    "yaml": "^2.3.1"
   },
   "dependencies": {
-    "@solidjs/meta": "^0.28.4",
+    "@solidjs/meta": "^0.28.5",
     "@solidjs/router": "^0.8.2",
     "markdown-yaml-metadata-parser": "^3.0.0",
-    "solid-js": "^1.7.2",
-    "solid-markdown": "^1.2.1",
+    "solid-js": "^1.7.6",
+    "solid-markdown": "^1.2.2",
     "solid-start": "^0.2.26",
-    "undici": "^5.21.0"
+    "undici": "^5.22.1"
   },
   "lint-staged": {
     "{src,posts,plugins,.github,}/**/*": "pnpm fmt"
