@@ -41,7 +41,8 @@
     "undici": "^5.22.1"
   },
   "lint-staged": {
-    "**/*.{ts,tsx,json,svg,yaml,yml,md}": "prettier -w"
+    "**/*.{ts,tsx,json,svg,yaml,yml,md}": "prettier -w",
+    "{src/routes,posts}/**/*": "pnpm build && git add public"
   },
   "engines": {
     "node": ">=16"
