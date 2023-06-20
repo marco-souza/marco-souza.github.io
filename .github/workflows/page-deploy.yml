@@ -4,7 +4,7 @@ on:
     branches:
       - main
 jobs:
-  quality-gateway:
+  tests:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
@@ -16,14 +16,18 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install and Build 🔧
+      - name: Install dependencites 🔧
         run: |
           npm install -g pnpm
           pnpm install
           pnpm test
 
-  build:
+      - name: Run tests 🧪
+        run: pnpm test
+
+  build-and-deploy:
     runs-on: ubuntu-latest
+    needs: tests
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2.3.1 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
