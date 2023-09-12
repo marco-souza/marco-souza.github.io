@@ -42,7 +42,7 @@
   },
   "lint-staged": {
     "**/*.{ts,tsx,json,svg,yaml,yml,md}": "prettier -w",
-    "{src/routes,posts}/**/*": "pnpm build && git add public"
+    "{src/routes,posts}/**/*": "bun run build && git add public"
   },
   "engines": {
     "node": ">=16"
